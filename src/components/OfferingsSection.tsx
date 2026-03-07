@@ -4,7 +4,7 @@ const offerings = [
   {
     title: "Yoga & Meditation",
     description:
-      "Asana, pranayama, and seated meditation rooted in classical tradition — practiced with patience, not performance.",
+      "Asana, pranayama, and seated meditation rooted in classical tradition - practiced with patience, not performance.",
   },
   {
     title: "Ayurvedic Guidance",
