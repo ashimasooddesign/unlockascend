@@ -9,17 +9,17 @@ const offerings = [
   {
     title: "Ayurvedic Guidance",
     description:
-      "Seasonal and daily rhythms (ritucharya, dinacharya) woven into life with care — not prescription, but attunement.",
+      "Seasonal and daily rhythms (ritucharya, dinacharya) woven into life with care - not prescription, but attunement.",
   },
   {
     title: "Scripture Study",
     description:
-      "Small-group inquiry into the Bhagavad Gita, Yoga Sutra, Devi Mahatmyam, and Garbhopanishad — reading slowly, together.",
+      "Small-group inquiry into the Bhagavad Gita, Yoga Sutra, Devi Mahatmyam, and Garbhopanishad - reading slowly, together.",
   },
   {
     title: "One-on-One Sessions",
     description:
-      "Contemplative conversations for those in transition — integrating practice, philosophy, and personal discernment.",
+      "Contemplative conversations for those in transition - integrating practice, philosophy, and personal discernment.",
   },
 ];
 

@@ -7,7 +7,7 @@ const ContactSection = () => {
         </h2>
         <p className="font-body text-base text-muted-foreground leading-relaxed mb-10">
           If something here resonates, I would welcome hearing from you. 
-          Whether you're seeking guidance, a study companion, or simply a thoughtful space — 
+          Whether you're seeking guidance, a study companion, or simply a thoughtful space - 
           reach out.
         </p>
         <a
