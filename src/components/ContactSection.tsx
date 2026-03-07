@@ -1,0 +1,24 @@
+const ContactSection = () => {
+  return (
+    <section id="connect" className="py-24 md:py-36 bg-card">
+      <div className="container max-w-2xl text-center">
+        <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-6">
+          Begin a Conversation
+        </h2>
+        <p className="font-body text-base text-muted-foreground leading-relaxed mb-10">
+          If something here resonates, I would welcome hearing from you. 
+          Whether you're seeking guidance, a study companion, or simply a thoughtful space — 
+          reach out.
+        </p>
+        <a
+          href="mailto:hello@ashima.co"
+          className="inline-block font-body text-sm tracking-widest uppercase text-primary border-b border-primary pb-1 hover:opacity-70 transition-opacity"
+        >
+          hello@ashima.co
+        </a>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
