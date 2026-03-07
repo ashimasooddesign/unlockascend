@@ -11,10 +11,10 @@ const ContactSection = () => {
           reach out.
         </p>
         <a
-          href="mailto:hello@ashima.co"
+          href="mailto:team@unlockascend.com"
           className="inline-block font-body text-sm tracking-widest uppercase text-primary border-b border-primary pb-1 hover:opacity-70 transition-opacity"
         >
-          hello@ashima.co
+          team@unlockascend.com
         </a>
       </div>
     </section>
