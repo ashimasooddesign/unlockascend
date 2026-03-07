@@ -12,7 +12,7 @@ const HeroSection = () => {
       </div>
       <div className="relative z-10 container max-w-4xl">
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-foreground leading-[1.1] mb-6">
-          Ashima
+          Ascend
         </h1>
         <p className="font-display text-xl md:text-2xl font-light text-muted-foreground max-w-xl leading-relaxed italic">
           Yoga · Ayurveda · Contemplative Study
