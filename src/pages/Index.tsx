@@ -1,6 +1,7 @@
 import SiteHeader from "@/components/SiteHeader";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import StudiesSection from "@/components/StudiesSection";
 import OfferingsSection from "@/components/OfferingsSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import ContactSection from "@/components/ContactSection";
@@ -13,6 +14,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutSection />
+        <StudiesSection />
         <OfferingsSection />
         <PhilosophySection />
         <ContactSection />

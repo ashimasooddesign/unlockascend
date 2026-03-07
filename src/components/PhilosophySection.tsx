@@ -11,7 +11,7 @@ const PhilosophySection = () => {
         </p>
         <div className="mt-16 w-12 h-px bg-primary opacity-40 mx-auto" />
         <p className="mt-8 font-body text-base text-muted-foreground max-w-lg mx-auto leading-relaxed">
-          This work is not about adding more. It is about returning — to rhythm, to 
+          This work is not about adding more. It is about returning - to rhythm, to 
           presence, to the quiet intelligence that precedes thought.
         </p>
       </div>
