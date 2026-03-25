@@ -6,7 +6,7 @@ const SiteHeader = () => {
           Ascend
         </span>
         <div className="flex items-center gap-8">
-          {["About", "Offerings", "Connect"].map((item) => (
+          {["About", "Studies", "Offerings", "Connect"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
