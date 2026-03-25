@@ -6,20 +6,35 @@ import OfferingsSection from "@/components/OfferingsSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import ContactSection from "@/components/ContactSection";
 import SiteFooter from "@/components/SiteFooter";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
       <main>
-        <HeroSection />
-        <AboutSection />
-        <StudiesSection />
-        <OfferingsSection />
-        <PhilosophySection />
-        <ContactSection />
+        <AnimatedSection>
+          <HeroSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <AboutSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <StudiesSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <OfferingsSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <PhilosophySection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <ContactSection />
+        </AnimatedSection>
       </main>
-      <SiteFooter />
+      <AnimatedSection>
+        <SiteFooter />
+      </AnimatedSection>
     </div>
   );
 };
