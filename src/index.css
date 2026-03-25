@@ -68,3 +68,29 @@
     font-family: var(--font-display);
   }
 }
+
+@layer utilities {
+  .wash-sage {
+    background: linear-gradient(
+      160deg,
+      hsl(145 18% 38% / 0.04) 0%,
+      hsl(40 33% 96% / 0) 60%
+    );
+  }
+
+  .wash-terracotta {
+    background: linear-gradient(
+      200deg,
+      hsl(16 45% 55% / 0.05) 0%,
+      hsl(40 33% 96% / 0) 60%
+    );
+  }
+
+  .wash-warm {
+    background: linear-gradient(
+      180deg,
+      hsl(35 30% 90% / 0.5) 0%,
+      hsl(40 33% 96% / 0) 100%
+    );
+  }
+}

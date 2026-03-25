@@ -1,6 +1,6 @@
 const StudiesSection = () => {
   return (
-    <section id="studies" className="py-24 md:py-36 bg-card">
+    <section id="studies" className="py-24 md:py-36 bg-card wash-warm">
       <div className="container max-w-3xl">
         <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-12">
           Studies & Learning Circles
