@@ -15,29 +15,29 @@ const AboutSection = () => {
               className="w-full h-full object-cover object-top"
             />
           </div>
-          <div className="space-y-8 font-body text-base md:text-lg leading-[1.85]">
-            <p className="text-earth">
+          <div className="space-y-8 font-body text-base md:text-lg leading-[1.85] text-foreground">
+            <p>
               Ashima Sood is a yogi, Ayurvedic practitioner, and facilitator of scripture-based
               study with a background in design and architecture.
             </p>
-            <p className="text-earth-light">
+            <p>
               Trained as a UX designer with a Master's degree in Interaction Design, she spent
               over a decade working in human-centered systems and research before being drawn
               more deeply into the contemplative traditions of yoga and{" "}
               <em className="font-display text-accent">Vedanta</em>.
             </p>
-            <p className="text-earth">
+            <p>
               Her work brings together classical yogic practice, Ayurvedic lifestyle guidance,
               and reflective study of texts such as the{" "}
               <em className="font-display text-accent">Bhagavad Gita</em>,{" "}
               <em className="font-display text-accent">Yoga Sutra</em>, and{" "}
               <em className="font-display text-accent">Devi Mahatmyam</em>.
             </p>
-            <p className="text-earth-light italic font-display text-lg md:text-xl leading-relaxed">
+            <p className="italic font-display text-lg md:text-xl leading-relaxed">
               Rather than focusing on trends or quick fixes, her approach emphasizes steadiness,
               discernment, and the gradual cultivation of inner clarity.
             </p>
-            <p className="text-earth">
+            <p>
               Through Ascend, she creates spaces for people to slow down, reconnect with their
               bodies and rhythms, and explore timeless teachings in ways that remain relevant to
               modern life.
