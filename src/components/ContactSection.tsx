@@ -5,10 +5,10 @@ const ContactSection = () => {
         <h2 className="font-display text-3xl md:text-4xl font-light text-earth mb-8">
           Begin a Conversation
         </h2>
-        <p className="font-body text-base text-earth leading-[1.85] mb-4">
+        <p className="font-body text-base text-foreground leading-[1.85] mb-4">
           If something here resonates, I would welcome hearing from you.
         </p>
-        <p className="font-display text-lg text-earth-light italic leading-relaxed mb-10">
+        <p className="font-display text-lg text-foreground italic leading-relaxed mb-10">
           Whether you're seeking guidance, a study companion, or simply a thoughtful space -
           reach out.
         </p>
