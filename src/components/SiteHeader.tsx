@@ -2,7 +2,7 @@ const SiteHeader = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
       <nav className="container max-w-5xl flex items-center justify-between py-5">
-        <span className="font-display text-lg font-normal text-foreground tracking-wide">
+        <span className="font-display text-lg font-normal text-earth tracking-wide">
           Ascend
         </span>
         <div className="flex items-center gap-8">

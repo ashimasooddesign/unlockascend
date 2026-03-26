@@ -39,7 +39,7 @@ const OfferingsSection = () => {
             <div className="space-y-10">
               {offerings.map((offering) => (
                 <div key={offering.title}>
-                  <h3 className="font-display text-xl md:text-2xl font-normal text-foreground mb-3">
+                  <h3 className="font-display text-xl md:text-2xl font-normal text-earth mb-3">
                     {offering.title}
                   </h3>
                   <p className="font-body text-sm md:text-base text-earth leading-[1.8] mb-1">

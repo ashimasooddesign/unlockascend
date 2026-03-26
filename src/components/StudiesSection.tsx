@@ -2,7 +2,7 @@ const StudiesSection = () => {
   return (
     <section id="studies" className="py-24 md:py-36 bg-card wash-warm">
       <div className="container max-w-3xl">
-        <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-14">
+        <h2 className="font-display text-3xl md:text-4xl font-light text-earth mb-14">
           Studies & Learning Circles
         </h2>
         <div className="space-y-8 font-body text-base md:text-lg leading-[1.85]">
