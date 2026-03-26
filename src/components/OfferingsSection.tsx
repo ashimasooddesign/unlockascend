@@ -4,17 +4,17 @@ const offerings = [
   {
     title: "Yoga & Meditation",
     description:
-      "Asana, pranayama, and seated meditation rooted in classical tradition - practiced with patience, not performance.",
+      "<em>Asana</em>, <em>pranayama</em>, and seated meditation rooted in classical tradition - practiced with patience, not performance.",
   },
   {
     title: "Ayurvedic Guidance",
     description:
-      "Seasonal and daily rhythms (ritucharya, dinacharya) woven into life with care - not prescription, but attunement.",
+      "Seasonal and daily rhythms (<em>ritucharya</em>, <em>dinacharya</em>) woven into life with care - not prescription, but attunement.",
   },
   {
     title: "Scripture Study",
     description:
-      "Small-group inquiry into the Bhagavad Gita, Yoga Sutra, Devi Mahatmyam, and Garbhopanishad - reading slowly, together.",
+      "Small-group inquiry into the <em>Bhagavad Gita</em>, <em>Yoga Sutra</em>, <em>Devi Mahatmyam</em>, and <em>Garbhopanishad</em> - reading slowly, together.",
   },
   {
     title: "One-on-One Sessions",

@@ -7,14 +7,14 @@ const StudiesSection = () => {
         </h2>
         <div className="space-y-6 font-body text-base md:text-lg text-muted-foreground leading-relaxed">
           <p>
-            Ascend hosts small, reflective study circles rooted in the classical yogic and 
+            <em>Ascend</em> hosts small, reflective study circles rooted in the classical yogic and 
             Vedantic traditions. These sessions approach sacred texts slowly and thoughtfully, 
             allowing participants to explore their philosophical depth and practical relevance 
             to modern life.
           </p>
           <p>
             Over time, these gatherings have included guided studies of texts such as the 
-            Bhagavad Gita, Yoga Sutra, Devi Mahatmyam, Garbhopanishad, and Sankhya Karika. 
+            <em>Bhagavad Gita</em>, <em>Yoga Sutra</em>, <em>Devi Mahatmyam</em>, <em>Garbhopanishad</em>, and <em>Sankhya Karika</em>. 
             Each study creates space for careful reading, discussion, and contemplation - 
             helping participants engage with the teachings not just intellectually, but as 
             living wisdom that can inform everyday choices and inner clarity.

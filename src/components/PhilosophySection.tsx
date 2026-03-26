@@ -7,7 +7,7 @@ const PhilosophySection = () => {
           we are established in our essential nature, which is unbounded consciousness."
         </blockquote>
         <p className="mt-8 font-body text-sm text-muted-foreground tracking-widest uppercase">
-          Patanjali's Yoga Sutra, 1.2–1.3
+          Patanjali's <em>Yoga Sutra</em>, 1.2–1.3
         </p>
         <div className="mt-16 w-12 h-px bg-primary opacity-40 mx-auto" />
         <p className="mt-8 font-body text-base text-muted-foreground max-w-lg mx-auto leading-relaxed">
