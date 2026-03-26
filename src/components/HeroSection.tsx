@@ -11,7 +11,7 @@ const HeroSection = () => {
         />
       </div>
       <div className="relative z-10 container max-w-4xl">
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-foreground leading-[1.1] mb-6">
+        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-earth leading-[1.1] mb-6">
           Ascend
         </h1>
         <p className="font-display text-xl md:text-2xl font-light text-earth-light max-w-xl leading-relaxed italic">
