@@ -42,7 +42,7 @@ const OfferingsSection = () => {
                   <h3 className="font-display text-xl md:text-2xl font-normal text-earth mb-3">
                     {offering.title}
                   </h3>
-                  <p className="font-body text-sm md:text-base text-earth leading-[1.8] mb-1">
+                  <p className="font-body text-sm md:text-base text-foreground leading-[1.8] mb-1">
                     {offering.description}
                   </p>
                   <p className="font-display text-sm md:text-base text-accent italic">
