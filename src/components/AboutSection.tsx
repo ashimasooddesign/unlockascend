@@ -21,16 +21,16 @@ const AboutSection = () => {
               study with a background in design and architecture. Trained as a UX designer with 
               a Master's degree in Interaction Design, she spent over a decade working in 
               human-centered systems and research before being drawn more deeply into the 
-              contemplative traditions of yoga and Vedanta.
+              contemplative traditions of <em>yoga</em> and <em>Vedanta</em>.
             </p>
             <p>
               Her work brings together classical yogic practice, Ayurvedic lifestyle guidance, 
-              and reflective study of texts such as the Bhagavad Gita, Yoga Sutra, and Devi 
-              Mahatmyam. Rather than focusing on trends or quick fixes, Ashima's approach 
+              and reflective study of texts such as the <em>Bhagavad Gita</em>, <em>Yoga Sutra</em>, and <em>Devi 
+              Mahatmyam</em>. Rather than focusing on trends or quick fixes, Ashima's approach 
               emphasizes steadiness, discernment, and the gradual cultivation of inner clarity.
             </p>
             <p>
-              Through Ascend, she creates spaces for people to slow down, reconnect with their 
+              Through <em>Ascend</em>, she creates spaces for people to slow down, reconnect with their 
               bodies and rhythms, and explore timeless teachings in ways that remain relevant to 
               modern life.
             </p>
