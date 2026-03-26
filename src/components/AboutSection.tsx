@@ -4,7 +4,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-24 md:py-36 wash-sage">
       <div className="container max-w-3xl">
-        <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-14">
+        <h2 className="font-display text-3xl md:text-4xl font-light text-earth mb-14">
           About Ashima
         </h2>
         <div className="flex flex-col md:flex-row gap-10 md:gap-14 items-start">
