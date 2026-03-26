@@ -38,9 +38,10 @@ const OfferingsSection = () => {
                   <h3 className="font-display text-xl md:text-2xl font-normal text-foreground mb-2">
                     {offering.title}
                   </h3>
-                  <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
-                    {offering.description}
-                  </p>
+                  <p
+                    className="font-body text-sm md:text-base text-muted-foreground leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: offering.description }}
+                  />
                 </div>
               ))}
             </div>
