@@ -49,6 +49,7 @@ const StudiesSection = () => {
             />
           </div>
         </div>
+      </div>
     </section>
   );
 };
