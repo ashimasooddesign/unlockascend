@@ -1,7 +1,9 @@
+import studiesImage from "@/assets/studies-image.jpg";
+
 const StudiesSection = () => {
   return (
     <section id="studies" className="py-24 md:py-36 bg-card wash-warm">
-      <div className="container max-w-3xl">
+      <div className="container max-w-5xl">
         <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-12">
           Studies & Learning Circles
         </h2>
