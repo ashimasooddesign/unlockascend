@@ -32,7 +32,7 @@ const SiteFooter = () => {
               <img
                 src={loveProtectSustainLogo}
                 alt="Love Protect Sustain"
-                className="h-10 w-auto"
+                className="h-4 w-auto"
               />
             </a>
           </div>
@@ -52,6 +52,14 @@ const SiteFooter = () => {
             className="font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
             Instagram
+          </a>
+          <a
+            href="https://ascendwithashima.substack.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Substack
           </a>
           <a
             href="https://www.trustpilot.com/review/unlockascend.com"
