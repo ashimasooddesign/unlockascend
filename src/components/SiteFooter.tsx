@@ -12,7 +12,7 @@ const SiteFooter = () => {
           </p>
           <div className="flex items-center gap-8">
             <a
-              href="https://thehyphenkonnect.com/wellness-services/"
+              href="https://www.thehyphenkonnect.com/professionals/ashima-sood"
               target="_blank"
               rel="noopener noreferrer"
               className="opacity-70 hover:opacity-100 transition-opacity"
@@ -46,12 +46,12 @@ const SiteFooter = () => {
         </span>
         <div className="flex items-center gap-6">
           <a
-            href="https://www.instagram.com/unlockascend/?hl=en"
+            href="https://www.trustpilot.com/review/unlockascend.com"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
-            Instagram
+            Trustpilot
           </a>
           <a
             href="https://ascendwithashima.substack.com/"
@@ -62,12 +62,12 @@ const SiteFooter = () => {
             Substack
           </a>
           <a
-            href="https://www.trustpilot.com/review/unlockascend.com"
+            href="https://www.instagram.com/unlockascend/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
-            Trustpilot
+            Instagram
           </a>
         </div>
         <p className="font-body text-xs text-muted-foreground">
