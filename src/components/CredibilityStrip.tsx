@@ -35,7 +35,7 @@ const CredibilityStrip = () => {
             />
           </a>
           <a
-            href="https://soulsensei.co"
+            href="https://www.soulsensei.in/"
             target="_blank"
             rel="noopener noreferrer"
             className="opacity-70 hover:opacity-100 transition-opacity"
