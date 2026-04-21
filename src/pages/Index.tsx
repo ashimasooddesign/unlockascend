@@ -2,6 +2,7 @@ import SiteHeader from "@/components/SiteHeader";
 import HeroSection from "@/components/HeroSection";
 import UpcomingSessionsSection from "@/components/UpcomingSessionsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import CredibilityStrip from "@/components/CredibilityStrip";
 import AboutSection from "@/components/AboutSection";
 import StudiesSection from "@/components/StudiesSection";
 import OfferingsSection from "@/components/OfferingsSection";
@@ -23,6 +24,9 @@ const Index = () => {
         </AnimatedSection>
         <AnimatedSection>
           <TestimonialsSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <CredibilityStrip />
         </AnimatedSection>
         <AnimatedSection>
           <AboutSection />
