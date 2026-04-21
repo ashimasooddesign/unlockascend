@@ -45,7 +45,7 @@ const StudiesSection = () => {
             <img
               src={studiesImage}
               alt="Study and contemplation session"
-              className="w-full aspect-[3/4] object-cover"
+              className="w-full aspect-[3/4] object-cover rounded-md"
             />
           </div>
         </div>

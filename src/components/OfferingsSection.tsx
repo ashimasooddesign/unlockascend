@@ -50,7 +50,7 @@ const OfferingsSection = () => {
             <img
               src={offeringImage}
               alt="Brass diya lamp on weathered wood"
-              className="w-full aspect-square object-cover"
+              className="w-full aspect-square object-cover rounded-md"
             />
           </div>
         </div>
