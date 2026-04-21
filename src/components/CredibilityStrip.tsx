@@ -43,7 +43,7 @@ const CredibilityStrip = () => {
             <img
               src={soulSenseiLogo}
               alt="Soul Sensei"
-              className="h-6 w-auto"
+              className="h-[1.2rem] w-auto"
             />
           </a>
         </div>
