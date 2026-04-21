@@ -9,41 +9,41 @@ const CredibilityStrip = () => {
         <p className="font-body text-xs tracking-widest uppercase text-muted-foreground">
           Trusted by communities and platforms including
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+        <div className="flex flex-wrap items-center justify-center gap-x-10 sm:gap-x-12 gap-y-6">
           <a
             href="https://www.thehyphenkonnect.com/professionals/ashima-sood"
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-70 hover:opacity-100 transition-opacity"
+            className="flex h-8 sm:h-10 items-center opacity-70 hover:opacity-100 transition-opacity"
           >
             <img
               src={hyphenKonnectLogo}
               alt="The Hyphen Konnect"
-              className="h-10 w-auto"
+              className="max-h-full w-auto object-contain"
             />
           </a>
           <a
             href="https://www.loveprotectsustain.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-70 hover:opacity-100 transition-opacity"
+            className="flex h-8 sm:h-10 items-center opacity-70 hover:opacity-100 transition-opacity"
           >
             <img
               src={loveProtectSustainLogo}
               alt="Love Protect Sustain"
-              className="h-4 w-auto"
+              className="max-h-[40%] w-auto object-contain"
             />
           </a>
           <a
             href="https://www.soulsensei.in/"
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-70 hover:opacity-100 transition-opacity"
+            className="flex h-8 sm:h-10 items-center opacity-70 hover:opacity-100 transition-opacity"
           >
             <img
               src={soulSenseiLogo}
               alt="Soul Sensei"
-              className="h-[1.2rem] w-auto"
+              className="max-h-[55%] w-auto object-contain"
             />
           </a>
         </div>
