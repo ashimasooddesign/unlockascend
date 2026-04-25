@@ -23,26 +23,29 @@ const SiteHeader = () => {
     const heroWordmark = document.querySelector<HTMLImageElement>(
       'section h1 img[alt="Ascend"]'
     );
-    if (!heroWordmark) return;
+    const headerEl = document.querySelector<HTMLElement>("header");
+    if (!heroWordmark || !headerEl) return;
 
-    // Header is ~72px tall. Use scroll position with hysteresis so the
-    // swap doesn't flicker if the user hovers right at the threshold.
-    const HEADER_OFFSET = 72;
-    const HYSTERESIS = 16;
-
+    // Trigger the swap when the hero wordmark's center crosses the bottom
+    // of the actual header — measured live so it matches on every viewport.
+    // Hysteresis is scaled to the wordmark height so the buffer feels the
+    // same on mobile and desktop without flicker.
     let ticking = false;
     let current = false;
 
     const evaluate = () => {
       ticking = false;
-      const rect = heroWordmark.getBoundingClientRect();
-      // Distance from the bottom of the hero wordmark to the bottom of the header.
-      const distance = rect.bottom - HEADER_OFFSET;
+      const heroRect = heroWordmark.getBoundingClientRect();
+      const headerBottom = headerEl.getBoundingClientRect().bottom;
 
-      if (!current && distance < -HYSTERESIS) {
+      const heroCenter = heroRect.top + heroRect.height / 2;
+      const distance = heroCenter - headerBottom;
+      const hysteresis = Math.max(8, heroRect.height * 0.15);
+
+      if (!current && distance < -hysteresis) {
         current = true;
         setShowWordmark(true);
-      } else if (current && distance > HYSTERESIS) {
+      } else if (current && distance > hysteresis) {
         current = false;
         setShowWordmark(false);
       }
@@ -57,10 +60,12 @@ const SiteHeader = () => {
     evaluate();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
+    window.addEventListener("orientationchange", onScroll);
 
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
+      window.removeEventListener("orientationchange", onScroll);
     };
   }, []);
 
