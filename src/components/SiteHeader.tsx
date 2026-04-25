@@ -16,63 +16,66 @@ const SiteHeader = () => {
     );
     if (!heroWordmark) return;
 
-    let observer: IntersectionObserver | null = null;
+    // Header is ~72px tall. Use scroll position with hysteresis so the
+    // swap doesn't flicker if the user hovers right at the threshold.
+    const HEADER_OFFSET = 72;
+    const HYSTERESIS = 16;
 
-    const setup = () => {
-      observer?.disconnect();
+    let ticking = false;
+    let current = false;
 
-      // Header is ~72px tall; trigger swap as the hero wordmark passes
-      // just under the header. Use a small bottom margin so we cross-fade
-      // a touch before it fully exits, and a thin slab threshold for stability.
-      const headerOffset = 72;
+    const evaluate = () => {
+      ticking = false;
       const rect = heroWordmark.getBoundingClientRect();
-      const wordmarkHeight = Math.max(rect.height, 1);
+      // Distance from the bottom of the hero wordmark to the bottom of the header.
+      const distance = rect.bottom - HEADER_OFFSET;
 
-      observer = new IntersectionObserver(
-        ([entry]) => {
-          setShowWordmark(!entry.isIntersecting);
-        },
-        {
-          // Shrink the viewport from the top by header height, and from the
-          // bottom enough that the observer flips right as the hero wordmark
-          // tucks behind the header — not when the section ends.
-          rootMargin: `-${headerOffset}px 0px -${Math.max(
-            0,
-            window.innerHeight - headerOffset - wordmarkHeight - 24
-          )}px 0px`,
-          threshold: [0, 0.25, 0.5, 0.75, 1],
-        }
-      );
-
-      observer.observe(heroWordmark);
+      if (!current && distance < -HYSTERESIS) {
+        current = true;
+        setShowWordmark(true);
+      } else if (current && distance > HYSTERESIS) {
+        current = false;
+        setShowWordmark(false);
+      }
     };
 
-    setup();
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(evaluate);
+    };
 
-    const onResize = () => setup();
-    window.addEventListener("resize", onResize);
+    evaluate();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
 
     return () => {
-      observer?.disconnect();
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
     };
   }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
       <nav className="container max-w-5xl flex items-center justify-between py-5">
-        <a href="#" className="relative flex items-center h-8">
+        <a
+          href="#"
+          aria-label="Ascend home"
+          className="relative flex items-center h-8 w-32 md:w-36 shrink-0"
+        >
           <img
             src={ascendLogo}
-            alt="Ascend"
-            className={`h-8 w-auto transition-opacity duration-500 ${
+            alt=""
+            aria-hidden="true"
+            className={`absolute left-0 top-1/2 -translate-y-1/2 h-8 w-auto transition-opacity duration-500 ease-out ${
               showWordmark ? "opacity-0" : "opacity-100"
             }`}
           />
           <img
             src={ascendWordmark}
-            alt="Ascend"
-            className={`absolute left-0 top-1/2 -translate-y-1/2 h-7 md:h-8 w-auto object-contain transition-opacity duration-500 ${
+            alt=""
+            aria-hidden="true"
+            className={`absolute left-0 top-1/2 -translate-y-1/2 h-7 md:h-8 w-auto max-w-full object-contain object-left transition-opacity duration-500 ease-out ${
               showWordmark ? "opacity-100" : "opacity-0"
             }`}
           />
