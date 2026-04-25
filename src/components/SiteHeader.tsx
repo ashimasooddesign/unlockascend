@@ -16,16 +16,46 @@ const SiteHeader = () => {
     );
     if (!heroWordmark) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // When hero wordmark is no longer visible, show wordmark in header
-        setShowWordmark(!entry.isIntersecting);
-      },
-      { threshold: 0, rootMargin: "-80px 0px 0px 0px" }
-    );
+    let observer: IntersectionObserver | null = null;
 
-    observer.observe(heroWordmark);
-    return () => observer.disconnect();
+    const setup = () => {
+      observer?.disconnect();
+
+      // Header is ~72px tall; trigger swap as the hero wordmark passes
+      // just under the header. Use a small bottom margin so we cross-fade
+      // a touch before it fully exits, and a thin slab threshold for stability.
+      const headerOffset = 72;
+      const rect = heroWordmark.getBoundingClientRect();
+      const wordmarkHeight = Math.max(rect.height, 1);
+
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          setShowWordmark(!entry.isIntersecting);
+        },
+        {
+          // Shrink the viewport from the top by header height, and from the
+          // bottom enough that the observer flips right as the hero wordmark
+          // tucks behind the header — not when the section ends.
+          rootMargin: `-${headerOffset}px 0px -${Math.max(
+            0,
+            window.innerHeight - headerOffset - wordmarkHeight - 24
+          )}px 0px`,
+          threshold: [0, 0.25, 0.5, 0.75, 1],
+        }
+      );
+
+      observer.observe(heroWordmark);
+    };
+
+    setup();
+
+    const onResize = () => setup();
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener("resize", onResize);
+    };
   }, []);
 
   return (
@@ -35,14 +65,14 @@ const SiteHeader = () => {
           <img
             src={ascendLogo}
             alt="Ascend"
-            className={`h-8 transition-opacity duration-500 ${
+            className={`h-8 w-auto transition-opacity duration-500 ${
               showWordmark ? "opacity-0" : "opacity-100"
             }`}
           />
           <img
             src={ascendWordmark}
             alt="Ascend"
-            className={`absolute left-0 top-1/2 -translate-y-1/2 h-5 w-auto transition-opacity duration-500 ${
+            className={`absolute left-0 top-1/2 -translate-y-1/2 h-7 md:h-8 w-auto object-contain transition-opacity duration-500 ${
               showWordmark ? "opacity-100" : "opacity-0"
             }`}
           />
