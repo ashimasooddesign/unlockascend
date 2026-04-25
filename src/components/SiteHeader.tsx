@@ -16,45 +16,42 @@ const SiteHeader = () => {
     );
     if (!heroWordmark) return;
 
-    let observer: IntersectionObserver | null = null;
+    // Header is ~72px tall. Use scroll position with hysteresis so the
+    // swap doesn't flicker if the user hovers right at the threshold.
+    const HEADER_OFFSET = 72;
+    const HYSTERESIS = 16;
 
-    const setup = () => {
-      observer?.disconnect();
+    let ticking = false;
+    let current = false;
 
-      // Header is ~72px tall; trigger swap as the hero wordmark passes
-      // just under the header. Use a small bottom margin so we cross-fade
-      // a touch before it fully exits, and a thin slab threshold for stability.
-      const headerOffset = 72;
+    const evaluate = () => {
+      ticking = false;
       const rect = heroWordmark.getBoundingClientRect();
-      const wordmarkHeight = Math.max(rect.height, 1);
+      // Distance from the bottom of the hero wordmark to the bottom of the header.
+      const distance = rect.bottom - HEADER_OFFSET;
 
-      observer = new IntersectionObserver(
-        ([entry]) => {
-          setShowWordmark(!entry.isIntersecting);
-        },
-        {
-          // Shrink the viewport from the top by header height, and from the
-          // bottom enough that the observer flips right as the hero wordmark
-          // tucks behind the header — not when the section ends.
-          rootMargin: `-${headerOffset}px 0px -${Math.max(
-            0,
-            window.innerHeight - headerOffset - wordmarkHeight - 24
-          )}px 0px`,
-          threshold: [0, 0.25, 0.5, 0.75, 1],
-        }
-      );
-
-      observer.observe(heroWordmark);
+      if (!current && distance < -HYSTERESIS) {
+        current = true;
+        setShowWordmark(true);
+      } else if (current && distance > HYSTERESIS) {
+        current = false;
+        setShowWordmark(false);
+      }
     };
 
-    setup();
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(evaluate);
+    };
 
-    const onResize = () => setup();
-    window.addEventListener("resize", onResize);
+    evaluate();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
 
     return () => {
-      observer?.disconnect();
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
     };
   }, []);
 
