@@ -9,6 +9,15 @@ const navItems = ["About", "Studies", "Offerings", "Connect"];
 const SiteHeader = () => {
   const [open, setOpen] = useState(false);
   const [showWordmark, setShowWordmark] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReducedMotion(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   useEffect(() => {
     const heroWordmark = document.querySelector<HTMLImageElement>(
@@ -67,17 +76,17 @@ const SiteHeader = () => {
             src={ascendLogo}
             alt=""
             aria-hidden="true"
-            className={`absolute left-0 top-1/2 -translate-y-1/2 h-8 w-auto transition-opacity duration-500 ease-out ${
-              showWordmark ? "opacity-0" : "opacity-100"
-            }`}
+            className={`absolute left-0 top-1/2 -translate-y-1/2 h-8 w-auto ${
+              reducedMotion ? "" : "transition-opacity duration-500 ease-out"
+            } ${showWordmark ? "opacity-0" : "opacity-100"}`}
           />
           <img
             src={ascendWordmark}
             alt=""
             aria-hidden="true"
-            className={`absolute left-0 top-1/2 -translate-y-1/2 h-7 md:h-8 w-auto max-w-full object-contain object-left transition-opacity duration-500 ease-out ${
-              showWordmark ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute left-0 top-1/2 -translate-y-1/2 h-7 md:h-8 w-auto max-w-full object-contain object-left ${
+              reducedMotion ? "" : "transition-opacity duration-500 ease-out"
+            } ${showWordmark ? "opacity-100" : "opacity-0"}`}
           />
         </a>
 
