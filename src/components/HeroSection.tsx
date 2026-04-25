@@ -16,7 +16,7 @@ const HeroSection = () => {
           <img
             src={ascendWordmark}
             alt="Ascend"
-            className="h-20 md:h-28 lg:h-36 w-auto"
+            className="h-12 md:h-[4.2rem] lg:h-[5.4rem] w-auto"
           />
         </h1>
         <p className="font-display text-xl md:text-2xl font-light text-muted-foreground max-w-xl leading-relaxed italic">
