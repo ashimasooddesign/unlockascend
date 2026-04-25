@@ -61,18 +61,24 @@ const SiteHeader = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
       <nav className="container max-w-5xl flex items-center justify-between py-5">
-        <a href="#" className="relative flex items-center h-8">
+        <a
+          href="#"
+          aria-label="Ascend home"
+          className="relative flex items-center h-8 w-32 md:w-36 shrink-0"
+        >
           <img
             src={ascendLogo}
-            alt="Ascend"
-            className={`h-8 w-auto transition-opacity duration-500 ${
+            alt=""
+            aria-hidden="true"
+            className={`absolute left-0 top-1/2 -translate-y-1/2 h-8 w-auto transition-opacity duration-500 ease-out ${
               showWordmark ? "opacity-0" : "opacity-100"
             }`}
           />
           <img
             src={ascendWordmark}
-            alt="Ascend"
-            className={`absolute left-0 top-1/2 -translate-y-1/2 h-7 md:h-8 w-auto object-contain transition-opacity duration-500 ${
+            alt=""
+            aria-hidden="true"
+            className={`absolute left-0 top-1/2 -translate-y-1/2 h-7 md:h-8 w-auto max-w-full object-contain object-left transition-opacity duration-500 ease-out ${
               showWordmark ? "opacity-100" : "opacity-0"
             }`}
           />
