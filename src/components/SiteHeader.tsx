@@ -105,11 +105,11 @@ const SiteHeader = () => {
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.href}
+              href={item.href}
               className="font-body text-xs tracking-widest uppercase text-brand hover:opacity-70 transition-opacity"
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>
@@ -124,12 +124,12 @@ const SiteHeader = () => {
           <SheetContent side="right" className="flex flex-col items-start gap-8 pt-16">
             {navItems.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.href}
+                href={item.href}
                 onClick={() => setOpen(false)}
                 className="font-body text-sm tracking-widest uppercase text-brand hover:opacity-70 transition-opacity"
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </SheetContent>
