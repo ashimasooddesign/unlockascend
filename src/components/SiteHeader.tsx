@@ -4,7 +4,13 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ascendLogo from "@/assets/ascend-logo.svg";
 import ascendWordmark from "@/assets/ascend-wordmark.png";
 
-const navItems = ["About", "Studies", "Offerings", "Connect"];
+const navItems = [
+  { label: "About", href: "#about" },
+  { label: "Studies", href: "#studies" },
+  { label: "Offerings", href: "#offerings" },
+  { label: "Writing", href: "#writing" },
+  { label: "Connect", href: "#connect" },
+];
 
 const SiteHeader = () => {
   const [open, setOpen] = useState(false);
