@@ -101,7 +101,7 @@ const SiteHeader = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+              className="font-body text-xs tracking-widest uppercase text-brand hover:opacity-70 transition-opacity"
             >
               {item}
             </a>
@@ -121,7 +121,7 @@ const SiteHeader = () => {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 onClick={() => setOpen(false)}
-                className="font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+                className="font-body text-sm tracking-widest uppercase text-brand hover:opacity-70 transition-opacity"
               >
                 {item}
               </a>
