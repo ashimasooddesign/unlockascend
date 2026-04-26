@@ -2,7 +2,7 @@ const ContactSection = () => {
   return (
     <section id="connect" className="py-24 md:py-36 bg-card wash-sage">
       <div className="container max-w-2xl text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-6">
+        <h2 className="font-display text-3xl md:text-4xl font-light text-brand mb-6">
           Begin a Conversation
         </h2>
         <p className="font-body text-base text-muted-foreground leading-relaxed mb-10">

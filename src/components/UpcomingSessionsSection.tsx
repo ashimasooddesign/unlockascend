@@ -2,7 +2,7 @@ const UpcomingSessionsSection = () => {
   return (
     <section id="sessions" className="py-24 md:py-36 bg-card wash-warm">
       <div className="container max-w-5xl">
-        <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-6">
+        <h2 className="font-display text-3xl md:text-4xl font-light text-brand mb-6">
           Upcoming Sessions
         </h2>
         <p className="font-body text-base md:text-lg text-muted-foreground mb-16 max-w-2xl">
