@@ -11,6 +11,7 @@ import ContactSection from "@/components/ContactSection";
 import SiteFooter from "@/components/SiteFooter";
 import AnimatedSection from "@/components/AnimatedSection";
 import MarkDivider from "@/components/MarkDivider";
+import BlogSection from "@/components/BlogSection";
 
 const Index = () => {
   return (
@@ -40,6 +41,10 @@ const Index = () => {
         </AnimatedSection>
         <AnimatedSection>
           <OfferingsSection />
+        </AnimatedSection>
+        <MarkDivider />
+        <AnimatedSection>
+          <BlogSection />
         </AnimatedSection>
         <MarkDivider />
         <AnimatedSection>
