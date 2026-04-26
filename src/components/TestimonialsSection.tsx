@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="py-24 md:py-36 wash-sage">
       <div className="container max-w-3xl">
-        <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-16 text-center">
+        <h2 className="font-display text-3xl md:text-4xl font-light text-brand mb-16 text-center">
           What Participants Say
         </h2>
 

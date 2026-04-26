@@ -6,7 +6,7 @@ const StudiesSection = () => {
       <div className="container max-w-5xl">
         <div className="grid md:grid-cols-2 gap-16 md:gap-20 items-start">
           <div>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-light text-brand mb-12">
               Studies & Learning Circles
             </h2>
             <div className="space-y-6 font-body text-base md:text-lg text-muted-foreground leading-relaxed">
