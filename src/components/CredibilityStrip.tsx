@@ -4,12 +4,12 @@ import soulSenseiLogo from "@/assets/soul-sensei.svg";
 
 const CredibilityStrip = () => {
   return (
-    <section className="py-16 border-t border-border/50">
-      <div className="container max-w-5xl flex flex-col items-center gap-6">
-        <p className="font-body text-xs tracking-widest uppercase text-muted-foreground">
+    <section className="py-20 md:py-28 border-t border-border/50">
+      <div className="container max-w-5xl flex flex-col items-center gap-10 md:gap-12">
+        <p className="font-body text-xs tracking-widest uppercase text-muted-foreground text-center">
           Trusted by communities and platforms including
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-10 sm:gap-x-12 gap-y-6">
+        <div className="flex flex-wrap items-center justify-center gap-x-14 sm:gap-x-16 md:gap-x-20 gap-y-10 md:gap-y-12 w-full">
           <a
             href="https://www.thehyphenkonnect.com/professionals/ashima-sood"
             target="_blank"
