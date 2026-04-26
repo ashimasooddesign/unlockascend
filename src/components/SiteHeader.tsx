@@ -4,7 +4,15 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ascendLogo from "@/assets/ascend-logo.svg";
 import ascendWordmark from "@/assets/ascend-wordmark.png";
 
-const navItems = ["About", "Studies", "Offerings", "Connect"];
+const navItems = [
+  { label: "About", href: "#about" },
+  { label: "Studies", href: "#studies" },
+  { label: "Offerings", href: "#offerings" },
+  { label: "Writing", href: "#writing" },
+  { label: "Connect", href: "#connect" },
+];
+
+const SUBSTACK_URL = "https://ascendwithashima.substack.com";
 
 const SiteHeader = () => {
   const [open, setOpen] = useState(false);
@@ -99,13 +107,21 @@ const SiteHeader = () => {
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.href}
+              href={item.href}
               className="font-body text-xs tracking-widest uppercase text-brand hover:opacity-70 transition-opacity"
             >
-              {item}
+              {item.label}
             </a>
           ))}
+          <a
+            href={SUBSTACK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-xs tracking-widest uppercase bg-brand text-primary-foreground px-4 py-2 rounded-sm hover:opacity-90 transition-opacity"
+          >
+            Subscribe
+          </a>
         </div>
 
         {/* Mobile */}
@@ -118,14 +134,23 @@ const SiteHeader = () => {
           <SheetContent side="right" className="flex flex-col items-start gap-8 pt-16">
             {navItems.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.href}
+                href={item.href}
                 onClick={() => setOpen(false)}
                 className="font-body text-sm tracking-widest uppercase text-brand hover:opacity-70 transition-opacity"
               >
-                {item}
+                {item.label}
               </a>
             ))}
+            <a
+              href={SUBSTACK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="font-body text-sm tracking-widest uppercase bg-brand text-primary-foreground px-4 py-2 rounded-sm hover:opacity-90 transition-opacity"
+            >
+              Subscribe
+            </a>
           </SheetContent>
         </Sheet>
       </nav>
