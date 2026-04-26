@@ -1,4 +1,5 @@
 const SUBSTACK_URL = "https://ascendwithashima.substack.com";
+const SUBSTACK_EMBED = "https://ascendwithashima.substack.com/embed";
 
 const posts = [
   {
@@ -84,7 +85,35 @@ const BlogSection = () => {
           ))}
         </ul>
 
-        <div className="mt-12 w-12 h-px bg-primary opacity-40" />
+        {/* Substack subscribe embed */}
+        <div className="mt-16 flex flex-col items-center text-center gap-6">
+          <h3 className="font-display text-2xl md:text-3xl font-light text-brand">
+            Subscribe to Ascend
+          </h3>
+          <p className="font-body text-base text-muted-foreground max-w-md leading-relaxed">
+            Receive new reflections in your inbox. Free, occasional, and never noisy.
+          </p>
+          <div className="w-full max-w-xl rounded-sm overflow-hidden border border-border/60 bg-card">
+            <iframe
+              src={SUBSTACK_EMBED}
+              title="Subscribe to Ascend with Ashima"
+              loading="lazy"
+              width="100%"
+              height="320"
+              style={{ border: 0, background: "transparent" }}
+            />
+          </div>
+          <a
+            href={SUBSTACK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-xs tracking-widest uppercase bg-brand text-primary-foreground px-6 py-3 rounded-sm hover:opacity-90 transition-opacity"
+          >
+            Subscribe on Substack
+          </a>
+        </div>
+
+        <div className="mt-12 w-12 h-px bg-primary opacity-40 mx-auto" />
       </div>
     </section>
   );
