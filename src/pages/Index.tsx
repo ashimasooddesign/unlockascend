@@ -10,6 +10,7 @@ import PhilosophySection from "@/components/PhilosophySection";
 import ContactSection from "@/components/ContactSection";
 import SiteFooter from "@/components/SiteFooter";
 import AnimatedSection from "@/components/AnimatedSection";
+import MarkDivider from "@/components/MarkDivider";
 
 const Index = () => {
   return (
@@ -22,24 +23,29 @@ const Index = () => {
         <AnimatedSection>
           <UpcomingSessionsSection />
         </AnimatedSection>
+        <MarkDivider />
         <AnimatedSection>
           <TestimonialsSection />
         </AnimatedSection>
         <AnimatedSection>
           <CredibilityStrip />
         </AnimatedSection>
+        <MarkDivider />
         <AnimatedSection>
           <AboutSection />
         </AnimatedSection>
+        <MarkDivider />
         <AnimatedSection>
           <StudiesSection />
         </AnimatedSection>
         <AnimatedSection>
           <OfferingsSection />
         </AnimatedSection>
+        <MarkDivider />
         <AnimatedSection>
           <PhilosophySection />
         </AnimatedSection>
+        <MarkDivider />
         <AnimatedSection>
           <ContactSection />
         </AnimatedSection>
