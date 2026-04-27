@@ -12,6 +12,7 @@ import SiteFooter from "@/components/SiteFooter";
 import AnimatedSection from "@/components/AnimatedSection";
 import MarkDivider from "@/components/MarkDivider";
 import BlogSection from "@/components/BlogSection";
+import ForYouSection from "@/components/ForYouSection";
 
 const Index = () => {
   return (
@@ -21,6 +22,11 @@ const Index = () => {
         <AnimatedSection>
           <HeroSection />
         </AnimatedSection>
+        <MarkDivider />
+        <AnimatedSection>
+          <ForYouSection />
+        </AnimatedSection>
+        <MarkDivider />
         <AnimatedSection>
           <UpcomingSessionsSection />
         </AnimatedSection>
