@@ -20,7 +20,7 @@ const HeroSection = () => {
           />
         </h1>
         <p className="font-display text-xl md:text-2xl font-light text-muted-foreground max-w-xl leading-relaxed italic">
-          Yoga · Ayurveda · Contemplative Study · with Ashima Sood
+          Yoga · Ayurveda · Contemplative Study · with Ashima
         </p>
         <div className="mt-8 w-12 h-px bg-primary opacity-60" />
         <p className="mt-6 font-body text-sm md:text-base text-muted-foreground max-w-md leading-relaxed">

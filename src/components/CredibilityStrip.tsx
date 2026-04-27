@@ -14,37 +14,52 @@ const CredibilityStrip = () => {
             href="https://www.thehyphenkonnect.com/professionals/ashima-sood"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-8 sm:h-10 items-center opacity-70 hover:opacity-100 transition-opacity"
+            className="flex flex-col items-center gap-2 group"
           >
-            <img
-              src={hyphenKonnectLogo}
-              alt="The Hyphen Konnect"
-              className="max-h-full w-auto object-contain"
-            />
+            <div className="flex h-8 sm:h-10 items-center opacity-70 group-hover:opacity-100 transition-opacity">
+              <img
+                src={hyphenKonnectLogo}
+                alt="The Hyphen Konnect"
+                className="max-h-full w-auto object-contain"
+              />
+            </div>
+            <p className="font-body text-xs text-muted-foreground/80 text-center max-w-[12rem]">
+              Narcissistic abuse survivor community
+            </p>
           </a>
           <a
             href="https://www.loveprotectsustain.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-8 sm:h-10 items-center opacity-70 hover:opacity-100 transition-opacity"
+            className="flex flex-col items-center gap-2 group"
           >
-            <img
-              src={loveProtectSustainLogo}
-              alt="Love Protect Sustain"
-              className="max-h-[40%] w-auto object-contain"
-            />
+            <div className="flex h-8 sm:h-10 items-center opacity-70 group-hover:opacity-100 transition-opacity">
+              <img
+                src={loveProtectSustainLogo}
+                alt="Love Protect Sustain"
+                className="max-h-[40%] w-auto object-contain"
+              />
+            </div>
+            <p className="font-body text-xs text-muted-foreground/80 text-center max-w-[12rem]">
+              Sustainable clothing brand
+            </p>
           </a>
           <a
             href="https://www.soulsensei.in/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-8 sm:h-10 items-center opacity-70 hover:opacity-100 transition-opacity"
+            className="flex flex-col items-center gap-2 group"
           >
-            <img
-              src={soulSenseiLogo}
-              alt="Soul Sensei"
-              className="max-h-[55%] w-auto object-contain"
-            />
+            <div className="flex h-8 sm:h-10 items-center opacity-70 group-hover:opacity-100 transition-opacity">
+              <img
+                src={soulSenseiLogo}
+                alt="Soul Sensei"
+                className="max-h-[55%] w-auto object-contain"
+              />
+            </div>
+            <p className="font-body text-xs text-muted-foreground/80 text-center max-w-[12rem]">
+              Spiritual learning platform
+            </p>
           </a>
         </div>
       </div>

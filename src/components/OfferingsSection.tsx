@@ -5,21 +5,25 @@ const offerings = [
     title: "Yoga & Meditation",
     description:
       "<em>Asana</em>, <em>pranayama</em>, and seated meditation rooted in classical tradition - practiced with patience, not performance.",
+    meta: 'Group sessions online · offered seasonally — see <a href="#sessions" class="underline underline-offset-4 hover:text-foreground transition-colors">Upcoming Sessions</a>',
   },
   {
     title: "Ayurvedic Guidance",
     description:
       "Seasonal and daily rhythms (<em>ritucharya</em>, <em>dinacharya</em>) woven into life with care - not prescription, but attunement.",
+    meta: 'Individual consultations available · <a href="#connect" class="underline underline-offset-4 hover:text-foreground transition-colors">Begin a conversation →</a>',
   },
   {
     title: "Scripture Study",
     description:
       "Small-group inquiry into the <em>Bhagavad Gita</em>, <em>Yoga Sutra</em>, <em>Devi Mahatmyam</em>, and <em>Garbhopanishad</em> - reading slowly, together.",
+    meta: 'Small group, application required · <a href="#sessions" class="underline underline-offset-4 hover:text-foreground transition-colors">see Upcoming Sessions →</a>',
   },
   {
     title: "One-on-One Sessions",
     description:
       "Contemplative conversations for those in transition - integrating practice, philosophy, and personal discernment.",
+    meta: 'For those navigating transitions or deepening practice · <a href="#connect" class="underline underline-offset-4 hover:text-foreground transition-colors">Begin a conversation →</a>',
   },
 ];
 
@@ -41,6 +45,10 @@ const OfferingsSection = () => {
                   <p
                     className="font-body text-sm md:text-base text-muted-foreground leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: offering.description }}
+                  />
+                  <p
+                    className="mt-2 font-body text-xs md:text-sm text-muted-foreground/80 italic leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: offering.meta }}
                   />
                 </div>
               ))}
