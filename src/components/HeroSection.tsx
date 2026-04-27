@@ -20,13 +20,27 @@ const HeroSection = () => {
           />
         </h1>
         <p className="font-display text-xl md:text-2xl font-light text-muted-foreground max-w-xl leading-relaxed italic">
-          Yoga · Ayurveda · Contemplative Study
+          Yoga · Ayurveda · Contemplative Study · with Ashima Sood
         </p>
         <div className="mt-8 w-12 h-px bg-primary opacity-60" />
         <p className="mt-6 font-body text-sm md:text-base text-muted-foreground max-w-md leading-relaxed">
-          Grounded guidance for those seeking clarity through traditional practice, 
+          Grounded guidance for those seeking clarity — not coping — through traditional practice,
           self-inquiry, and a return to what is essential.
         </p>
+        <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
+          <a
+            href="#sessions"
+            className="font-body text-sm md:text-base text-brand hover:opacity-70 transition-opacity"
+          >
+            Upcoming sessions →
+          </a>
+          <a
+            href="#connect"
+            className="font-body text-sm md:text-base text-brand hover:opacity-70 transition-opacity"
+          >
+            Begin a conversation →
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import ascendMark from "@/assets/ascend-mark.png";
+import ascendMark from "@/assets/seam-mark.png";
 
 /**
  * Decorative section mark that visually bridges two sections.
