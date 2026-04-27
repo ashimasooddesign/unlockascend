@@ -13,6 +13,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import MarkDivider from "@/components/MarkDivider";
 import BlogSection from "@/components/BlogSection";
 import ForYouSection from "@/components/ForYouSection";
+import ReturningSection from "@/components/ReturningSection";
 
 const Index = () => {
   return (
@@ -25,6 +26,9 @@ const Index = () => {
         <MarkDivider />
         <AnimatedSection>
           <ForYouSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <ReturningSection />
         </AnimatedSection>
         <MarkDivider />
         <AnimatedSection>

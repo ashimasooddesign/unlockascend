@@ -73,7 +73,13 @@ const UpcomingSessionsSection = () => {
               </li>
             </ul>
             <p className="font-body text-sm text-muted-foreground/80 italic pt-1">
-              Details and registration opening soon.
+              Registration opens soon.{" "}
+              <a
+                href="#connect"
+                className="underline underline-offset-4 hover:text-foreground transition-colors not-italic"
+              >
+                reach out to add your email to be notified first →
+              </a>
             </p>
           </div>
         </div>
