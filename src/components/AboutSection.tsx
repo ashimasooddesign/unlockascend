@@ -24,10 +24,18 @@ const AboutSection = () => {
               contemplative traditions of <em>yoga</em> and <em>Vedanta</em>.
             </p>
             <p>
+              This wasn't a pivot — it was a return. The same questions that had animated her 
+              design work — how do we understand experience, how do we make systems that serve 
+              the person within — were the ones the classical texts had always been asking.
+            </p>
+            <p>
               Her work brings together classical yogic practice, Ayurvedic lifestyle guidance, 
               and reflective study of texts such as the <em>Bhagavad Gita</em>, <em>Yoga Sutra</em>, and <em>Devi 
-              Mahatmyam</em>. Rather than focusing on trends or quick fixes, Ashima's approach 
-              emphasizes steadiness, discernment, and the gradual cultivation of inner clarity.
+              Mahatmyam</em>. She holds a 900-hour Teacher Training Certification from The Yoga 
+              Institute, Mumbai — one of the oldest yoga institutions in the world — where her 
+              grounding in the classical texts began. Rather than focusing on trends or quick 
+              fixes, Ashima's approach emphasizes steadiness, discernment, and the gradual 
+              cultivation of inner clarity.
             </p>
             <p>
               Through <em>Ascend</em>, she creates spaces for people to slow down, reconnect with their 
