@@ -29,7 +29,7 @@ const HeroSection = () => {
         </p>
         <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
           <a
-            href="#upcoming"
+            href="#sessions"
             className="font-body text-sm md:text-base text-brand hover:opacity-70 transition-opacity"
           >
             Upcoming sessions →
