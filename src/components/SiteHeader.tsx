@@ -114,14 +114,6 @@ const SiteHeader = () => {
               {item.label}
             </a>
           ))}
-          <a
-            href={SUBSTACK_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-xs tracking-widest uppercase bg-brand text-primary-foreground px-4 py-2 rounded-sm hover:opacity-90 transition-opacity"
-          >
-            Subscribe
-          </a>
         </div>
 
         {/* Mobile */}
