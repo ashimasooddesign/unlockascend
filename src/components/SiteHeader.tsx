@@ -12,7 +12,7 @@ const navItems = [
   { label: "Connect", href: "#connect" },
 ];
 
-const SUBSTACK_URL = "https://ascendwithashima.substack.com";
+
 
 const SiteHeader = () => {
   const [open, setOpen] = useState(false);
@@ -114,14 +114,6 @@ const SiteHeader = () => {
               {item.label}
             </a>
           ))}
-          <a
-            href={SUBSTACK_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-xs tracking-widest uppercase bg-brand text-primary-foreground px-4 py-2 rounded-sm hover:opacity-90 transition-opacity"
-          >
-            Subscribe
-          </a>
         </div>
 
         {/* Mobile */}
@@ -142,15 +134,6 @@ const SiteHeader = () => {
                 {item.label}
               </a>
             ))}
-            <a
-              href={SUBSTACK_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="font-body text-sm tracking-widest uppercase bg-brand text-primary-foreground px-4 py-2 rounded-sm hover:opacity-90 transition-opacity"
-            >
-              Subscribe
-            </a>
           </SheetContent>
         </Sheet>
       </nav>
