@@ -8,7 +8,7 @@ const items = [
 
 const ForYouSection = () => {
   return (
-    <section id="for-you" className="py-24 md:py-36">
+    <section id="for-you" aria-label="Who this work is for" className="py-24 md:py-36">
       <div className="container max-w-2xl">
         <h2 className="font-display text-3xl md:text-4xl font-light text-brand mb-12 text-center">
           This work is for you if…

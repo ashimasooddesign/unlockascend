@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://unlockascend.lovable.app/</loc>
+    <loc>https://unlockascend.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://unlockascend.lovable.app/#for-you</loc>
+    <loc>https://unlockascend.com/#for-you</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://unlockascend.lovable.app/#sessions</loc>
+    <loc>https://unlockascend.com/#sessions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://unlockascend.lovable.app/#about</loc>
+    <loc>https://unlockascend.com/#about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://unlockascend.lovable.app/#offerings</loc>
+    <loc>https://unlockascend.com/#offerings</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://unlockascend.lovable.app/#studies</loc>
+    <loc>https://unlockascend.com/#studies</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://unlockascend.lovable.app/#connect</loc>
+    <loc>https://unlockascend.com/#writing</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://unlockascend.com/#connect</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

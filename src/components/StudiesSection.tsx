@@ -2,7 +2,7 @@ import studiesImage from "@/assets/studies-image.jpg";
 
 const StudiesSection = () => {
   return (
-    <section id="studies" className="py-24 md:py-36 bg-card wash-warm">
+    <section id="studies" aria-label="Studies and learning circles" className="py-24 md:py-36 bg-card wash-warm">
       <div className="container max-w-5xl">
         <div className="grid md:grid-cols-2 gap-16 md:gap-20 items-start">
           <div>
