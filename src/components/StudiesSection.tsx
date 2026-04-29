@@ -41,11 +41,11 @@ const StudiesSection = () => {
             </div>
             <div className="mt-12 w-12 h-px bg-primary opacity-40" />
           </div>
-          <div className="hidden md:block">
+          <div className="order-first md:order-none">
             <img
               src={studiesImage}
               alt="Study and contemplation session"
-              className="w-full aspect-[3/4] object-cover rounded-md"
+              className="w-full aspect-[3/4] md:aspect-[3/4] object-cover rounded-md"
             />
           </div>
         </div>
