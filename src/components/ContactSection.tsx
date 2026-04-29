@@ -1,3 +1,5 @@
+import ContactForm from "./ContactForm";
+
 const ContactSection = () => {
   return (
     <section id="connect" className="py-24 md:py-36 bg-card wash-sage">
@@ -6,12 +8,12 @@ const ContactSection = () => {
           Begin a Conversation
         </h2>
         <p className="font-body text-base text-muted-foreground leading-relaxed mb-10">
-          If something here resonates, I would welcome hearing from you. 
-          Whether you're seeking guidance, a study companion, or simply a thoughtful space - 
+          If something here resonates, I would welcome hearing from you.
+          Whether you're seeking guidance, a study companion, or simply a thoughtful space -
           reach out.
         </p>
         <p className="font-body text-sm text-muted-foreground leading-relaxed mb-10 italic">
-          Whether you're drawn to a specific offering, have a question about fit, or simply 
+          Whether you're drawn to a specific offering, have a question about fit, or simply
           want to say hello — you're welcome to write. I respond personally.
         </p>
         <a
@@ -20,6 +22,7 @@ const ContactSection = () => {
         >
           team@unlockascend.com
         </a>
+        <ContactForm />
       </div>
     </section>
   );
