@@ -153,6 +153,18 @@ const BlogSection = () => {
           </ul>
         )}
 
+        <div className="mt-16 max-w-xl mx-auto">
+          <iframe
+            src="https://ascendwithashima.substack.com/embed"
+            width="100%"
+            height="320"
+            style={{ border: "1px solid hsl(var(--border))", background: "hsl(var(--background))" }}
+            frameBorder={0}
+            scrolling="no"
+            title="Subscribe to Ascend on Substack"
+          />
+        </div>
+
         <div className="mt-12 w-12 h-px bg-primary opacity-40 mx-auto" />
       </div>
     </section>
