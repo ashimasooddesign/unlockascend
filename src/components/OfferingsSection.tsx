@@ -29,7 +29,7 @@ const offerings = [
 
 const OfferingsSection = () => {
   return (
-    <section id="offerings" className="py-24 md:py-36 bg-card">
+    <section id="offerings" aria-label="Offerings: yoga, Ayurveda, scripture study, one-on-one" className="py-24 md:py-36 bg-card">
       <div className="container max-w-5xl">
         <div className="grid md:grid-cols-2 gap-16 md:gap-20 items-start">
           <div>

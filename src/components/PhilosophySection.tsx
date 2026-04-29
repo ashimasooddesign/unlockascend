@@ -1,6 +1,6 @@
 const PhilosophySection = () => {
   return (
-    <section className="py-24 md:py-36 wash-terracotta">
+    <section aria-label="Yoga Sutra philosophy quote" className="py-24 md:py-36 wash-terracotta">
       <div className="container max-w-3xl text-center">
         <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-snug italic">
           "Yoga is the settling of the mind into silence. When the mind has settled, 

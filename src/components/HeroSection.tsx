@@ -3,7 +3,7 @@ import ascendWordmark from "@/assets/ascend-wordmark.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-end pb-20 md:pb-32">
+    <section aria-label="Introduction" className="relative min-h-screen flex flex-col justify-end pb-20 md:pb-32">
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}

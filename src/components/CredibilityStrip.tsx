@@ -4,7 +4,7 @@ import soulSenseiLogo from "@/assets/soul-sensei.svg";
 
 const CredibilityStrip = () => {
   return (
-    <section className="py-16 border-t border-border/50">
+    <section aria-label="Trusted by communities and platforms" className="py-16 border-t border-border/50">
       <div className="container max-w-5xl flex flex-col items-center gap-6">
         <p className="font-body text-xs tracking-widest uppercase text-muted-foreground">
           Trusted by communities and platforms including

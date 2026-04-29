@@ -66,7 +66,7 @@ const BlogSection = () => {
   }, []);
 
   return (
-    <section id="writing" className="py-24 md:py-36">
+    <section id="writing" aria-label="Writing on practice and scripture" className="py-24 md:py-36">
       <div className="container max-w-4xl">
         <div className="flex items-end justify-between mb-12 gap-6 flex-wrap">
           <div>
