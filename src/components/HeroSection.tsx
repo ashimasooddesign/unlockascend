@@ -13,9 +13,13 @@ const HeroSection = () => {
       </div>
       <div className="relative z-10 container max-w-4xl">
         <h1 className="mb-6">
+          <span className="sr-only">
+            Ascend — Yoga, Ayurveda and scripture study with Ashima Sood
+          </span>
           <img
             src={ascendWordmark}
-            alt="Ascend"
+            alt=""
+            aria-hidden="true"
             className="h-12 md:h-[4.2rem] lg:h-[5.4rem] w-auto"
           />
         </h1>
