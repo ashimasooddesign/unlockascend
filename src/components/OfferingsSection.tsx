@@ -54,7 +54,7 @@ const OfferingsSection = () => {
               ))}
             </div>
           </div>
-          <div className="hidden md:block">
+          <div className="order-first md:order-none">
             <img
               src={offeringImage}
               alt="Brass diya lamp on weathered wood"
