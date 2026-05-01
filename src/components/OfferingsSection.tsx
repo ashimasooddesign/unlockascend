@@ -23,7 +23,7 @@ const offerings = [
     title: "One-on-One Sessions",
     description:
       "Contemplative conversations for those in transition - integrating practice, philosophy, and personal discernment.",
-    meta: 'For those navigating transitions or deepening practice · <a href="#connect" class="underline underline-offset-4 hover:text-foreground transition-colors">Begin a conversation →</a>',
+    meta: 'For those navigating transitions or deepening practice · <a href="/one-on-one" class="underline underline-offset-4 hover:text-foreground transition-colors">Learn more →</a>',
   },
 ];
 
