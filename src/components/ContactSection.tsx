@@ -1,5 +1,3 @@
-import ContactForm from "./ContactForm";
-
 const ContactSection = () => {
   return (
     <section id="connect" aria-label="Contact Ashima" className="py-24 md:py-36 bg-card wash-sage">
@@ -14,7 +12,7 @@ const ContactSection = () => {
         </p>
         <p className="font-body text-sm text-muted-foreground leading-relaxed mb-10 italic">
           Whether you're drawn to a specific offering, have a question about fit, or simply
-          want to say hello — you're welcome to write. I respond personally.
+          want to say hello, you're welcome to write. I respond personally.
         </p>
         <a
           href="mailto:team@unlockascend.com"
@@ -22,7 +20,6 @@ const ContactSection = () => {
         >
           team@unlockascend.com
         </a>
-        <ContactForm />
       </div>
     </section>
   );

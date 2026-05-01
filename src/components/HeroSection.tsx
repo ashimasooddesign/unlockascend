@@ -18,8 +18,8 @@ const HeroSection = () => {
           </span>
           <img
             src={ascendWordmark}
-            alt=""
-            aria-hidden="true"
+            alt="Ascend"
+            data-hero-wordmark="true"
             className="h-12 md:h-[4.2rem] lg:h-[5.4rem] w-auto"
           />
         </h1>
