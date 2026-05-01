@@ -29,7 +29,7 @@ const SiteHeader = () => {
 
   useEffect(() => {
     const heroWordmark = document.querySelector<HTMLImageElement>(
-      'section h1 img[alt="Ascend"]'
+      'img[data-hero-wordmark="true"]'
     );
     const headerEl = document.querySelector<HTMLElement>("header");
     if (!heroWordmark || !headerEl) return;
