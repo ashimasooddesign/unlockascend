@@ -78,15 +78,23 @@ const UpcomingSessionsSection = () => {
                 <span>Chanting, mudras &amp; chakra balancing</span>
               </li>
             </ul>
-            <p className="font-body text-sm text-muted-foreground/80 italic pt-1">
-              Registration opens soon.{" "}
+            <div className="pt-1 flex flex-wrap items-center gap-x-6 gap-y-2">
+              <p className="font-body text-sm text-muted-foreground/80 italic">
+                Registration opens soon.{" "}
+                <a
+                  href="#connect"
+                  className="underline underline-offset-4 hover:text-foreground transition-colors not-italic"
+                >
+                  reach out to be notified first →
+                </a>
+              </p>
               <a
-                href="#connect"
-                className="underline underline-offset-4 hover:text-foreground transition-colors not-italic"
+                href="/navratri-sadhana"
+                className="inline-flex items-center gap-1.5 font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
               >
-                reach out to add your email to be notified first →
+                Learn more
               </a>
-            </p>
+            </div>
           </div>
         </div>
 
