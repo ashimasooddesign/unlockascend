@@ -32,6 +32,12 @@ const testimonials = [
     name: "C. Russell",
     descriptor: "Devi Mahatmyam study participant",
   },
+  {
+    quote:
+      "Introduction to Patanjali Yoga Sutras by Ashima as the Teacher brought me closer to myself and provided answers to some of my questions on life and living. The profound content of the Chapters and the clear explanation of the sutras by her, through experiences and examples helped me understand better. Verse 2.33 on Pratipaksha bhavanam has become my mool mantra. The revision before the session and consolidation at the end with interconnections during the session, helped put things in perspective. Meditation was another highlight of the sessions. Ashima's energy took me to a calming and reflective space, energising me in a quiet way. The unhurried pace, open-endedness with no prescriptions and her humility helped me internalize and put the learning into action. Look forward to our last Chapter after a short break because of work commitments.",
+    name: "Bela",
+    descriptor: "Yog Sutra study participant, IN",
+  },
 ];
 
 const TestimonialsSection = () => {
