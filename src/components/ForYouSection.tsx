@@ -12,12 +12,6 @@ const ForYouSection = () => {
   return (
     <section id="for-you" aria-label="Who this work is for" className="py-24 md:py-36">
       <div className="container max-w-2xl">
-        <img
-          src={ascendLogo}
-          alt=""
-          aria-hidden="true"
-          className="h-12 md:h-14 w-auto mx-auto mb-8 opacity-90"
-        />
         <h2 className="font-display text-3xl md:text-4xl font-light text-brand mb-12 text-center">
           This work is for you if…
         </h2>
