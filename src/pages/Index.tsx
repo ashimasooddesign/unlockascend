@@ -65,6 +65,10 @@ const Index = () => {
         <AnimatedSection>
           <ContactSection />
         </AnimatedSection>
+        <MarkDivider />
+        <AnimatedSection>
+          <FaqSection />
+        </AnimatedSection>
       </main>
       <AnimatedSection>
         <SiteFooter />
