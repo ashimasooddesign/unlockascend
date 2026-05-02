@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Is this a religious practice? Do I need to be Hindu?",
-    a: "The teachings I work with come from the Hindu philosophical tradition, and I don't strip that context away. That said, you don't need to identify as Hindu to study here. These texts deal with questions that anyone living an examined life will recognise: how do we act rightly, what is the nature of the self, how do we meet suffering with clarity. What I ask is that you come with genuine respect for the tradition rather than a desire to extract the useful parts.",
+    a: "These teachings come from within the Sanatana Dharma tradition, and I hold that context with care, it isn't something I set aside for the sake of accessibility. You don't need to identify as Hindu to study here, but you do need to come with genuine respect for where these teachings come from. The questions the texts ask, about the nature of the self, right action, the ground beneath experience, are ones any sincere seeker will recognise. If you're drawn to this work, that draw is usually reason enough.",
   },
   {
     q: "How is this different from a regular yoga class or wellness programme?",
