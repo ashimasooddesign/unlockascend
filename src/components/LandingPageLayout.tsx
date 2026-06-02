@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -34,6 +34,27 @@ const LandingPageLayout = ({
   ctaLabel,
   ctaNote,
 }: LandingPageLayoutProps) => {
+  useEffect(() => {
+    const id = "landing-faq-jsonld";
+    document.getElementById(id)?.remove();
+    if (!faqs?.length) return;
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = id;
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    });
+    document.head.appendChild(script);
+    return () => {
+      document.getElementById(id)?.remove();
+    };
+  }, [faqs]);
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
