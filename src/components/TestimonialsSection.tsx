@@ -38,6 +38,12 @@ const testimonials = [
     name: "Bela",
     descriptor: "Yog Sutra study participant, IN",
   },
+  {
+    quote:
+      'It will come to you when it\'s meant to."\n\nThis is something I\'ve heard Ashima say often when speaking about spiritual teachings.\n\nAnd in my experience of starting Sutra Studies with Ashima, I feel like it really did.\n\nI began sutra study sessions with Ashima when I was at a crossroads in my career and life, in a liminal space between two chapters — a time when I was rebuilding and re-evaluating my sense of purpose, direction, and personal values. Our sessions were exactly what I needed.\n\nAshima has a rare ability to bring clarity and depth to each conversation. She invited reflection, created space for genuine inquiry, and allowed each persons meaning-making journey to unfold naturally.\n\nHer sessions was marked by simplicity and depth. We would often read the sutras (at times requesting repeats), discuss our understandings, ask questions, share experiences, and close with a group meditation.\n\nIt\'s clear that Ashima is a spiritual teacher grounded in experience, deep personal practice, and intentional study. This comes through in the way she holds space, the questions she asks, and how she responds, weaving connections between the Yoga Sutras, Ayurveda, Advaita Vedanta, the Bhagavad Gita, Samkhya philosophy, elements of Western psychology, and more.\n\nHer presence felt grounded yet incisive, humble yet assured, balanced and steady in a way that is rare to find.\n\nGrateful and heart-full, Shima Sood 🙏🤍',
+    name: "Anchal",
+    descriptor: "Yog Sutra Study participant, CA",
+  },
 ];
 
 const TestimonialsSection = () => {
