@@ -79,6 +79,19 @@ const SiteHeader = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
+      <div className="bg-primary/[0.08] text-center py-2 px-4">
+        <span className="font-body text-xs tracking-widest uppercase text-primary/80">
+          Yoga Day session —{" "}
+        </span>
+        <a
+          href="https://topmate.io/ashima_sood/2138265"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-body text-xs tracking-widest uppercase text-primary underline underline-offset-4 hover:text-foreground transition-colors"
+        >
+          Register here →
+        </a>
+      </div>
       <nav className="container max-w-5xl flex items-center justify-between py-5">
         <a
           href="#"
