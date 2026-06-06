@@ -119,8 +119,7 @@ const SiteHeader = () => {
           className="bg-primary/[0.08] text-center py-2 px-10 relative"
         >
           <span className="font-body text-[11px] tracking-widest uppercase text-primary/80">
-            90-minute Yog Sutras study session — 7 PM IST
-            {localTime && ` (${localTime})`} —{" "}
+            90-minute Yog Sutras study session — {localTime} —{" "}
           </span>
           <a
             href="https://topmate.io/ashima_sood/2138265"
