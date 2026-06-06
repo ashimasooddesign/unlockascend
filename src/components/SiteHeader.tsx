@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ascendLogo from "@/assets/ascend-logo.svg";
 import ascendWordmark from "@/assets/ascend-wordmark.png";
@@ -18,6 +18,14 @@ const SiteHeader = () => {
   const [open, setOpen] = useState(false);
   const [showWordmark, setShowWordmark] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [bannerDismissed, setBannerDismissed] = useState(() => {
+    try {
+      return localStorage.getItem("yoga-day-banner-dismissed") === "true";
+    } catch {
+      return false;
+    }
+  });
+  const [localTime, setLocalTime] = useState("");
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -25,6 +33,23 @@ const SiteHeader = () => {
     update();
     mq.addEventListener("change", update);
     return () => mq.removeEventListener("change", update);
+  }, []);
+
+  useEffect(() => {
+    const istDate = new Date();
+    istDate.setHours(19, 0, 0, 0);
+    // IST is UTC+5:30
+    const istOffset = 330;
+    const localOffset = -istDate.getTimezoneOffset();
+    const diffMinutes = localOffset - istOffset;
+    const localDate = new Date(istDate.getTime() + diffMinutes * 60 * 1000);
+    setLocalTime(
+      new Intl.DateTimeFormat(undefined, {
+        hour: "numeric",
+        minute: "2-digit",
+        timeZoneName: "short",
+      }).format(localDate)
+    );
   }, []);
 
   useEffect(() => {
@@ -77,21 +102,43 @@ const SiteHeader = () => {
     };
   }, []);
 
+  const dismissBanner = () => {
+    setBannerDismissed(true);
+    try {
+      localStorage.setItem("yoga-day-banner-dismissed", "true");
+    } catch {}
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
-      <div className="bg-primary/[0.08] text-center py-2 px-4">
-        <span className="font-body text-xs tracking-widest uppercase text-primary/80">
-          Yoga Day session —{" "}
-        </span>
-        <a
-          href="https://topmate.io/ashima_sood/2138265"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-body text-xs tracking-widest uppercase text-primary underline underline-offset-4 hover:text-foreground transition-colors"
+      {!bannerDismissed && (
+        <div
+          role="status"
+          aria-live="polite"
+          aria-label="Announcement: upcoming Yog Sutras study session"
+          className="bg-primary/[0.08] text-center py-2 px-10 relative"
         >
-          Register here →
-        </a>
-      </div>
+          <span className="font-body text-[11px] tracking-widest uppercase text-primary/80">
+            90-minute Yog Sutras study session — 7 PM IST
+            {localTime && ` (${localTime})`} —{" "}
+          </span>
+          <a
+            href="https://topmate.io/ashima_sood/2138265"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-[11px] tracking-widest uppercase text-primary underline underline-offset-4 hover:text-foreground transition-colors"
+          >
+            Register here →
+          </a>
+          <button
+            onClick={dismissBanner}
+            aria-label="Dismiss announcement"
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-primary/60 hover:text-foreground transition-colors"
+          >
+            <X className="h-3.5 w-3.5" />
+          </button>
+        </div>
+      )}
       <nav className="container max-w-5xl flex items-center justify-between py-5">
         <a
           href="#"
