@@ -36,6 +36,23 @@ const SiteHeader = () => {
   }, []);
 
   useEffect(() => {
+    const istDate = new Date();
+    istDate.setHours(19, 0, 0, 0);
+    // IST is UTC+5:30
+    const istOffset = 330;
+    const localOffset = -istDate.getTimezoneOffset();
+    const diffMinutes = localOffset - istOffset;
+    const localDate = new Date(istDate.getTime() + diffMinutes * 60 * 1000);
+    setLocalTime(
+      new Intl.DateTimeFormat(undefined, {
+        hour: "numeric",
+        minute: "2-digit",
+        timeZoneName: "short",
+      }).format(localDate)
+    );
+  }, []);
+
+  useEffect(() => {
     const heroWordmark = document.querySelector<HTMLImageElement>(
       'img[data-hero-wordmark="true"]'
     );
