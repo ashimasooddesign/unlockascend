@@ -18,6 +18,14 @@ const SiteHeader = () => {
   const [open, setOpen] = useState(false);
   const [showWordmark, setShowWordmark] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [bannerDismissed, setBannerDismissed] = useState(() => {
+    try {
+      return localStorage.getItem("yoga-day-banner-dismissed") === "true";
+    } catch {
+      return false;
+    }
+  });
+  const [localTime, setLocalTime] = useState("");
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
