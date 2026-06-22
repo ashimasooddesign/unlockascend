@@ -73,6 +73,14 @@ const Blog = () => {
               {all.map((p) => (
                 <li key={p.slug} className="border-b border-border pb-12 last:border-0">
                   <Link to={`/blog/${p.slug}`} className="group block">
+                    {p.image && (
+                      <img
+                        src={p.image}
+                        alt=""
+                        loading="lazy"
+                        className="w-full aspect-[2/1] object-cover rounded-sm mb-6"
+                      />
+                    )}
                     <p className="font-body text-[11px] tracking-widest uppercase text-foreground/50 mb-3">
                       <time dateTime={p.pubDate}>{formatDate(p.pubDate)}</time>
                       <span className="mx-2">·</span>

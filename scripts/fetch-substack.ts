@@ -90,10 +90,18 @@ async function fetchFeed(): Promise<Post[]> {
     const author = get(item["dc:creator"] || item.author).trim();
     const description = stripHtml(get(item.description));
     const rawContent = get(item["content:encoded"]) || get(item.description);
-    const contentHtml = cleanHtml(rawContent);
     const wordCount = stripHtml(rawContent).split(/\s+/).length;
     const enclosureUrl =
       typeof item.enclosure === "object" ? item.enclosure["@_url"] : undefined;
+    const heroImage = enclosureUrl || firstImage(rawContent);
+
+    // Strip the leading image/figure from the article body so the hero
+    // image (rendered on the listing) doesn't repeat at the top of the post.
+    let bodyHtml = rawContent.replace(
+      /^\s*(?:<div[^>]*captioned-image[^>]*>[\s\S]*?<\/div>|<figure[\s\S]*?<\/figure>|<p>\s*<img[\s\S]*?<\/p>|<img[^>]*>)\s*/i,
+      ""
+    );
+    const contentHtml = cleanHtml(bodyHtml);
 
     return {
       slug: slugFromUrl(link),
@@ -102,7 +110,7 @@ async function fetchFeed(): Promise<Post[]> {
       url: link,
       pubDate,
       author,
-      image: enclosureUrl || firstImage(rawContent),
+      image: heroImage,
       contentHtml,
       readingMinutes: Math.max(1, Math.round(wordCount / 220)),
     };

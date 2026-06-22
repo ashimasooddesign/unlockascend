@@ -69,14 +69,6 @@ const BlogPost = () => {
             </h1>
           </header>
 
-          {post.image && (
-            <img
-              src={post.image}
-              alt=""
-              className="w-full rounded-sm mb-10 aspect-[2/1] object-cover"
-              loading="eager"
-            />
-          )}
 
           <div
             className="prose prose-neutral max-w-none font-body
