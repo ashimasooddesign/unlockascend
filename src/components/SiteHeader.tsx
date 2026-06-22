@@ -8,7 +8,7 @@ const navItems = [
   { label: "About", href: "#about" },
   { label: "Studies", href: "#studies" },
   { label: "Offerings", href: "#offerings" },
-  { label: "Writing", href: "/blog" },
+  { label: "Blog", href: "/blog" },
   { label: "Connect", href: "#connect" },
 ];
 
@@ -111,33 +111,6 @@ const SiteHeader = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
-      {!bannerDismissed && (
-        <div
-          role="status"
-          aria-live="polite"
-          aria-label="Announcement: upcoming Yog Sutras study session"
-          className="bg-primary/[0.08] text-center py-2 px-10 relative"
-        >
-          <span className="font-body text-[11px] tracking-widest uppercase text-primary/80">
-            International Yoga Day 2026 — 90-minute Yog Sutras study session — {localTime} —{" "}
-          </span>
-          <a
-            href="https://topmate.io/ashima_sood/2138265"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-[11px] tracking-widest uppercase text-primary underline underline-offset-4 hover:text-foreground transition-colors"
-          >
-            Register here →
-          </a>
-          <button
-            onClick={dismissBanner}
-            aria-label="Dismiss announcement"
-            className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-primary/60 hover:text-foreground transition-colors"
-          >
-            <X className="h-3.5 w-3.5" />
-          </button>
-        </div>
-      )}
       <nav className="container max-w-5xl flex items-center justify-between py-5">
         <a
           href="#"
