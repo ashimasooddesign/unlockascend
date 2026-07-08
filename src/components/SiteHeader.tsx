@@ -5,11 +5,11 @@ import ascendLogo from "@/assets/ascend-logo.svg";
 import ascendWordmark from "@/assets/ascend-wordmark.png";
 
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Studies", href: "#studies" },
-  { label: "Offerings", href: "#offerings" },
+  { label: "About", href: "/#about" },
+  { label: "Studies", href: "/#studies" },
+  { label: "Offerings", href: "/#offerings" },
   { label: "Blog", href: "/blog" },
-  { label: "Connect", href: "#connect" },
+  { label: "Connect", href: "/#connect" },
 ];
 
 
