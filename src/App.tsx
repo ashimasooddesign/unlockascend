@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import ScrollToHash from "./components/ScrollToHash";
 import NotFound from "./pages/NotFound";
 import YogaSutraStudy from "./pages/YogaSutraStudy";
 import NavratriSadhana from "./pages/NavratriSadhana";
@@ -19,6 +20,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToHash />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/yoga-sutra-study" element={<YogaSutraStudy />} />
