@@ -113,7 +113,7 @@ const SiteHeader = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
       <nav className="container max-w-5xl flex items-center justify-between py-5">
         <a
-          href="#"
+          href="/"
           aria-label="Ascend home"
           className="relative flex items-center h-8 w-32 md:w-36 shrink-0"
         >
