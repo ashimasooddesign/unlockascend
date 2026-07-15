@@ -73,37 +73,77 @@ const Blog = () => {
             </p>
           </header>
 
-          {all.length === 0 ? (
+          {hasPodcasts && (
+            <div className="flex justify-center gap-2 mb-12" role="tablist" aria-label="Filter posts">
+              {(["all", "essays", "podcasts"] as const).map((key) => (
+                <button
+                  key={key}
+                  role="tab"
+                  aria-selected={filter === key}
+                  onClick={() => setFilter(key)}
+                  className={`font-body text-xs tracking-widest uppercase px-4 py-2 border transition-colors ${
+                    filter === key
+                      ? "border-brand text-brand"
+                      : "border-border text-foreground/60 hover:text-brand"
+                  }`}
+                >
+                  {key}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {filtered.length === 0 ? (
             <p className="text-center font-body text-foreground/60">
               New writing coming soon.
             </p>
           ) : (
             <ul className="space-y-12">
-              {all.map((p) => (
+              {filtered.map((p) => (
                 <li key={p.slug} className="border-b border-border pb-12 last:border-0">
-                  <Link to={`/blog/${p.slug}`} className="group block">
-                    {p.image && (
+                  {p.image && (
+                    <Link to={`/blog/${p.slug}`} className="block group">
                       <img
                         src={p.image}
                         alt=""
                         loading="lazy"
                         className="w-full aspect-[2/1] object-cover rounded-sm mb-6"
                       />
+                    </Link>
+                  )}
+                  <p className="font-body text-[11px] tracking-widest uppercase text-foreground/50 mb-3 flex items-center gap-3">
+                    {p.audioUrl && (
+                      <span className="inline-flex items-center gap-1 text-brand">
+                        <span aria-hidden>●</span> Podcast
+                      </span>
                     )}
-                    <p className="font-body text-[11px] tracking-widest uppercase text-foreground/50 mb-3">
-                      <time dateTime={p.pubDate}>{formatDate(p.pubDate)}</time>
-                      <span className="mx-2">·</span>
-                      {p.readingMinutes} min read
-                    </p>
+                    <time dateTime={p.pubDate}>{formatDate(p.pubDate)}</time>
+                    <span>·</span>
+                    <span>{p.readingMinutes} min read</span>
+                  </p>
+                  <Link to={`/blog/${p.slug}`} className="group block">
                     <h2 className="font-display text-2xl md:text-3xl text-brand group-hover:text-primary transition-colors mb-3">
                       {p.title}
                     </h2>
                     <p className="font-body text-foreground/70 leading-relaxed">
                       {p.description}
                     </p>
-                    <span className="inline-block mt-4 font-body text-xs tracking-widest uppercase text-primary">
-                      Read essay →
-                    </span>
+                  </Link>
+                  {p.audioUrl && (
+                    <audio
+                      controls
+                      preload="none"
+                      src={p.audioUrl}
+                      className="w-full mt-5"
+                    >
+                      <a href={p.audioUrl}>Download episode</a>
+                    </audio>
+                  )}
+                  <Link
+                    to={`/blog/${p.slug}`}
+                    className="inline-block mt-4 font-body text-xs tracking-widest uppercase text-primary hover:text-brand transition-colors"
+                  >
+                    {p.audioUrl ? "Read the notes →" : "Read essay →"}
                   </Link>
                 </li>
               ))}
