@@ -29,7 +29,12 @@ const formatDate = (iso: string) =>
   });
 
 const Blog = () => {
-  useSeo({
+  const [filter, setFilter] = useState<"all" | "essays" | "podcasts">("all");
+  const hasPodcasts = all.some((p) => p.audioUrl);
+  const filtered = all.filter((p) =>
+    filter === "all" ? true : filter === "podcasts" ? !!p.audioUrl : !p.audioUrl
+  );
+
     title: "Writing — Ascend with Ashima",
     description:
       "Essays and reflections on the Yoga Sutras, Ayurveda, Vedanta and the Bhagavad Gita — for grounded, thoughtful living.",
