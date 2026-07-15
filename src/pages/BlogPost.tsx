@@ -12,6 +12,8 @@ interface Post {
   author: string;
   image?: string;
   url: string;
+  audioUrl?: string;
+  audioType?: string;
   contentHtml: string;
   readingMinutes: number;
 }
