@@ -12,6 +12,8 @@ interface Post {
   author: string;
   image?: string;
   url: string;
+  audioUrl?: string;
+  audioType?: string;
   contentHtml: string;
   readingMinutes: number;
 }
@@ -59,15 +61,32 @@ const BlogPost = () => {
           </Link>
 
           <header className="mt-8 mb-10">
-            <p className="font-body text-[11px] tracking-widest uppercase text-foreground/50 mb-4">
+            <p className="font-body text-[11px] tracking-widest uppercase text-foreground/50 mb-4 flex flex-wrap items-center gap-x-3 gap-y-1">
+              {post.audioUrl && (
+                <span className="text-brand">● Podcast</span>
+              )}
               <time dateTime={post.pubDate}>{formatDate(post.pubDate)}</time>
-              <span className="mx-2">·</span>
-              {post.readingMinutes} min read
+              <span>·</span>
+              <span>{post.readingMinutes} min read</span>
             </p>
             <h1 className="font-display text-3xl md:text-5xl text-brand leading-tight">
               {post.title}
             </h1>
+            {post.audioUrl && (
+              <div className="mt-8">
+                <audio
+                  controls
+                  preload="metadata"
+                  src={post.audioUrl}
+                  className="w-full"
+                >
+                  <a href={post.audioUrl}>Download episode</a>
+                </audio>
+              </div>
+            )}
           </header>
+
+
 
 
           <div

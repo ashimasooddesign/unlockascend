@@ -21,6 +21,8 @@ export interface Post {
   pubDate: string;
   author: string;
   image?: string;
+  audioUrl?: string;
+  audioType?: string;
   contentHtml: string;
   readingMinutes: number;
 }
@@ -91,9 +93,21 @@ async function fetchFeed(): Promise<Post[]> {
     const description = stripHtml(get(item.description));
     const rawContent = get(item["content:encoded"]) || get(item.description);
     const wordCount = stripHtml(rawContent).split(/\s+/).length;
-    const enclosureUrl =
-      typeof item.enclosure === "object" ? item.enclosure["@_url"] : undefined;
-    const heroImage = enclosureUrl || firstImage(rawContent);
+
+    const enclosures = Array.isArray(item.enclosure)
+      ? item.enclosure
+      : item.enclosure
+        ? [item.enclosure]
+        : [];
+    const audioEnc = enclosures.find((e: any) =>
+      String(e?.["@_type"] ?? "").startsWith("audio/")
+    );
+    const imageEnc = enclosures.find((e: any) =>
+      String(e?.["@_type"] ?? "").startsWith("image/")
+    );
+    const audioUrl = audioEnc?.["@_url"];
+    const audioType = audioEnc?.["@_type"];
+    const heroImage = imageEnc?.["@_url"] || firstImage(rawContent);
 
     // Strip the leading image/figure from the article body so the hero
     // image (rendered on the listing) doesn't repeat at the top of the post.
@@ -111,6 +125,8 @@ async function fetchFeed(): Promise<Post[]> {
       pubDate,
       author,
       image: heroImage,
+      audioUrl,
+      audioType,
       contentHtml,
       readingMinutes: Math.max(1, Math.round(wordCount / 220)),
     };
