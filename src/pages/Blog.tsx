@@ -35,6 +35,7 @@ const Blog = () => {
     filter === "all" ? true : filter === "podcasts" ? !!p.audioUrl : !p.audioUrl
   );
 
+  useSeo({
     title: "Writing — Ascend with Ashima",
     description:
       "Essays and reflections on the Yoga Sutras, Ayurveda, Vedanta and the Bhagavad Gita — for grounded, thoughtful living.",
