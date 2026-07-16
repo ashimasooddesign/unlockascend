@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -15,35 +15,69 @@ interface Post {
   audioUrl?: string;
   audioType?: string;
   readingMinutes: number;
+  tags?: string[];
+  type?: "essay" | "podcast";
 }
 
-const all = (posts as Post[]).slice().sort(
-  (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
-);
+const all = posts as Post[];
 
 const formatDate = (iso: string) =>
   new Date(iso).toLocaleDateString(undefined, {
     year: "numeric",
-    month: "long",
+    month: "short",
     day: "numeric",
   });
 
+type SortKey = "newest" | "oldest" | "title";
+type TypeFilter = "all" | "essays" | "podcasts";
+
 const Blog = () => {
-  const [filter, setFilter] = useState<"all" | "essays" | "podcasts">("all");
+  const [query, setQuery] = useState("");
+  const [sort, setSort] = useState<SortKey>("newest");
+  const [typeFilter, setTypeFilter] = useState<TypeFilter>("all");
+  const [activeTag, setActiveTag] = useState<string | null>(null);
+
+  const allTags = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const p of all) for (const t of p.tags || []) counts.set(t, (counts.get(t) || 0) + 1);
+    return Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 14)
+      .map(([t]) => t);
+  }, []);
+
   const hasPodcasts = all.some((p) => p.audioUrl);
-  const filtered = all.filter((p) =>
-    filter === "all" ? true : filter === "podcasts" ? !!p.audioUrl : !p.audioUrl
-  );
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    let list = all.filter((p) => {
+      if (typeFilter === "podcasts" && !p.audioUrl) return false;
+      if (typeFilter === "essays" && p.audioUrl) return false;
+      if (activeTag && !(p.tags || []).some((t) => t.toLowerCase() === activeTag.toLowerCase())) return false;
+      if (q) {
+        const hay = `${p.title} ${p.description} ${(p.tags || []).join(" ")}`.toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+    list = list.slice().sort((a, b) => {
+      if (sort === "title") return a.title.localeCompare(b.title);
+      const ta = new Date(a.pubDate).getTime();
+      const tb = new Date(b.pubDate).getTime();
+      return sort === "oldest" ? ta - tb : tb - ta;
+    });
+    return list;
+  }, [query, sort, typeFilter, activeTag]);
 
   useSeo({
-    title: "Writing — Ascend with Ashima",
+    title: "Blog — Ascend with Ashima",
     description:
       "Essays and reflections on the Yoga Sutras, Ayurveda, Vedanta and the Bhagavad Gita — for grounded, thoughtful living.",
     canonical: "/blog",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Blog",
-      name: "Ascend with Ashima — Writing",
+      name: "Ascend with Ashima — Blog",
       url: "/blog",
       blogPost: all.slice(0, 20).map((p) => ({
         "@type": "BlogPosting",
@@ -59,10 +93,10 @@ const Blog = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <SiteHeader />
       <main className="flex-1 pt-32 pb-24">
-        <div className="container max-w-3xl">
-          <header className="mb-16 text-center">
+        <div className="container max-w-6xl">
+          <header className="mb-12 text-center">
             <p className="font-body text-xs tracking-[0.25em] uppercase text-primary/70 mb-4">
-              Writing
+              Blog
             </p>
             <h1 className="font-display text-4xl md:text-5xl text-brand mb-6">
               Essays &amp; Reflections
@@ -73,78 +107,137 @@ const Blog = () => {
             </p>
           </header>
 
-          {hasPodcasts && (
-            <div className="flex justify-center gap-2 mb-12" role="tablist" aria-label="Filter posts">
-              {(["all", "essays", "podcasts"] as const).map((key) => (
+          {/* Controls */}
+          <div className="mb-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-6 justify-between">
+            <div className="flex flex-1 max-w-md">
+              <label htmlFor="blog-search" className="sr-only">Search articles</label>
+              <input
+                id="blog-search"
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search articles…"
+                className="w-full bg-transparent border border-border rounded-sm px-4 py-2.5 font-body text-sm placeholder:text-foreground/40 focus:outline-none focus:border-brand transition-colors"
+              />
+            </div>
+            <div className="flex items-center gap-3 flex-wrap">
+              {hasPodcasts && (
+                <div className="flex" role="tablist" aria-label="Filter by type">
+                  {(["all", "essays", "podcasts"] as const).map((key) => (
+                    <button
+                      key={key}
+                      role="tab"
+                      aria-selected={typeFilter === key}
+                      onClick={() => setTypeFilter(key)}
+                      className={`font-body text-[11px] tracking-widest uppercase px-3 py-2 border -ml-px first:ml-0 transition-colors ${
+                        typeFilter === key
+                          ? "border-brand text-brand bg-brand/5"
+                          : "border-border text-foreground/60 hover:text-brand"
+                      }`}
+                    >
+                      {key}
+                    </button>
+                  ))}
+                </div>
+              )}
+              <label className="sr-only" htmlFor="blog-sort">Sort</label>
+              <select
+                id="blog-sort"
+                value={sort}
+                onChange={(e) => setSort(e.target.value as SortKey)}
+                className="bg-transparent border border-border rounded-sm px-3 py-2 font-body text-xs tracking-widest uppercase text-foreground/70 focus:outline-none focus:border-brand transition-colors"
+              >
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="title">A–Z</option>
+              </select>
+            </div>
+          </div>
+
+          {/* Tag chips */}
+          {allTags.length > 0 && (
+            <div className="mb-10 flex flex-wrap gap-2">
+              <button
+                onClick={() => setActiveTag(null)}
+                className={`font-body text-[11px] tracking-widest uppercase px-3 py-1.5 border rounded-full transition-colors ${
+                  activeTag === null
+                    ? "border-brand text-brand bg-brand/5"
+                    : "border-border text-foreground/60 hover:text-brand"
+                }`}
+              >
+                All topics
+              </button>
+              {allTags.map((tag) => (
                 <button
-                  key={key}
-                  role="tab"
-                  aria-selected={filter === key}
-                  onClick={() => setFilter(key)}
-                  className={`font-body text-xs tracking-widest uppercase px-4 py-2 border transition-colors ${
-                    filter === key
-                      ? "border-brand text-brand"
+                  key={tag}
+                  onClick={() => setActiveTag(activeTag === tag ? null : tag)}
+                  className={`font-body text-[11px] tracking-widest uppercase px-3 py-1.5 border rounded-full transition-colors ${
+                    activeTag === tag
+                      ? "border-brand text-brand bg-brand/5"
                       : "border-border text-foreground/60 hover:text-brand"
                   }`}
                 >
-                  {key}
+                  {tag}
                 </button>
               ))}
             </div>
           )}
 
+          <p className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-6">
+            {filtered.length} {filtered.length === 1 ? "article" : "articles"}
+          </p>
+
           {filtered.length === 0 ? (
-            <p className="text-center font-body text-foreground/60">
-              New writing coming soon.
+            <p className="text-center font-body text-foreground/60 py-20">
+              No articles match your filters.
             </p>
           ) : (
-            <ul className="space-y-12">
+            <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {filtered.map((p) => (
-                <li key={p.slug} className="border-b border-border pb-12 last:border-0">
-                  {p.image && (
-                    <Link to={`/blog/${p.slug}`} className="block group">
+                <li key={p.slug} className="group flex flex-col">
+                  <Link to={`/blog/${p.slug}`} className="block overflow-hidden rounded-sm bg-muted/40 aspect-[16/10] mb-4">
+                    {p.image ? (
                       <img
                         src={p.image}
                         alt=""
                         loading="lazy"
-                        className="w-full aspect-[2/1] object-cover rounded-sm mb-6"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                       />
-                    </Link>
-                  )}
-                  <p className="font-body text-[11px] tracking-widest uppercase text-foreground/50 mb-3 flex items-center gap-3">
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center font-display text-brand/40 text-3xl">
+                        ॐ
+                      </div>
+                    )}
+                  </Link>
+                  <p className="font-body text-[11px] tracking-widest uppercase text-foreground/50 mb-2 flex items-center gap-2 flex-wrap">
                     {p.audioUrl && (
-                      <span className="inline-flex items-center gap-1 text-brand">
-                        <span aria-hidden>●</span> Podcast
-                      </span>
+                      <span className="inline-flex items-center gap-1 text-brand">● Podcast</span>
                     )}
                     <time dateTime={p.pubDate}>{formatDate(p.pubDate)}</time>
-                    <span>·</span>
-                    <span>{p.readingMinutes} min read</span>
+                    <span aria-hidden>·</span>
+                    <span>{p.readingMinutes} min</span>
                   </p>
-                  <Link to={`/blog/${p.slug}`} className="group block">
-                    <h2 className="font-display text-2xl md:text-3xl text-brand group-hover:text-primary transition-colors mb-3">
+                  <Link to={`/blog/${p.slug}`} className="block">
+                    <h2 className="font-display text-xl md:text-2xl text-brand group-hover:text-primary transition-colors mb-2 leading-snug">
                       {p.title}
                     </h2>
-                    <p className="font-body text-foreground/70 leading-relaxed">
+                    <p className="font-body text-sm text-foreground/70 leading-relaxed line-clamp-3">
                       {p.description}
                     </p>
                   </Link>
-                  {p.audioUrl && (
-                    <audio
-                      controls
-                      preload="none"
-                      src={p.audioUrl}
-                      className="w-full mt-5"
-                    >
-                      <a href={p.audioUrl}>Download episode</a>
-                    </audio>
+                  {p.tags && p.tags.length > 0 && (
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {p.tags.slice(0, 3).map((t) => (
+                        <button
+                          key={t}
+                          onClick={() => setActiveTag(t)}
+                          className="font-body text-[10px] tracking-wider uppercase text-foreground/50 hover:text-brand transition-colors"
+                        >
+                          #{t}
+                        </button>
+                      ))}
+                    </div>
                   )}
-                  <Link
-                    to={`/blog/${p.slug}`}
-                    className="inline-block mt-4 font-body text-xs tracking-widest uppercase text-primary hover:text-brand transition-colors"
-                  >
-                    {p.audioUrl ? "Read the notes →" : "Read essay →"}
-                  </Link>
                 </li>
               ))}
             </ul>
