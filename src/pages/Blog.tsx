@@ -4,6 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useSeo } from "@/hooks/useSeo";
 import posts from "@/data/posts.json";
+import ascendLogo from "@/assets/ascend-logo.svg";
 
 interface Post {
   slug: string;
@@ -195,17 +196,21 @@ const Blog = () => {
             <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {filtered.map((p) => (
                 <li key={p.slug} className="group flex flex-col">
-                  <Link to={`/blog/${p.slug}`} className="block overflow-hidden rounded-sm bg-muted/40 aspect-[16/10] mb-4">
+                  <Link to={`/blog/${p.slug}`} className="block overflow-hidden rounded-sm bg-muted/40 aspect-[3/2] mb-4">
                     {p.image ? (
                       <img
                         src={p.image}
                         alt=""
                         loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center font-display text-brand/40 text-3xl">
-                        ॐ
+                      <div className="w-full h-full flex items-center justify-center p-8 bg-muted/30">
+                        <img
+                          src={ascendLogo}
+                          alt=""
+                          className="w-1/2 max-w-[120px] h-auto opacity-40 transition-transform duration-500 group-hover:scale-[1.03]"
+                        />
                       </div>
                     )}
                   </Link>
