@@ -4,6 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useSeo } from "@/hooks/useSeo";
 import posts from "@/data/posts.json";
+import ascendLogo from "@/assets/ascend-logo.svg";
 
 interface Post {
   slug: string;
