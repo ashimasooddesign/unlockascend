@@ -10,7 +10,7 @@ const AboutSection = () => {
         <div className="flex flex-col md:flex-row gap-10 md:gap-14 items-start">
           <div className="w-48 h-60 md:w-56 md:h-72 flex-shrink-0 rounded-md overflow-hidden">
             <img
-              src={ashimaPhoto}
+              src={ashimaPhoto.url}
               alt="Ashima Sood"
               className="w-full h-full object-cover object-top"
             />
