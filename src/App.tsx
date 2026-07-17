@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import YogaSutraStudy from "./pages/YogaSutraStudy";
 import NavratriSadhana from "./pages/NavratriSadhana";
 import OneOnOneSessions from "./pages/OneOnOneSessions";
+import Purushartha from "./pages/Purushartha";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 
