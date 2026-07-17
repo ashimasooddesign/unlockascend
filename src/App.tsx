@@ -27,6 +27,7 @@ const App = () => (
           <Route path="/yoga-sutra-study" element={<YogaSutraStudy />} />
           <Route path="/navratri-sadhana" element={<NavratriSadhana />} />
           <Route path="/one-on-one" element={<OneOnOneSessions />} />
+          <Route path="/purushartha" element={<Purushartha />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
