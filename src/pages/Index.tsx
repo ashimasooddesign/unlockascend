@@ -25,6 +25,9 @@ const Index = () => {
         <AnimatedSection>
           <HeroSection />
         </AnimatedSection>
+        <AnimatedSection>
+          <PurusharthaFeature />
+        </AnimatedSection>
         <MarkDivider />
         <AnimatedSection>
           <ForYouSection />
