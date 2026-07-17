@@ -15,6 +15,7 @@ import BlogSection from "@/components/BlogSection";
 import ForYouSection from "@/components/ForYouSection";
 import ReturningSection from "@/components/ReturningSection";
 import FaqSection from "@/components/FaqSection";
+import PurusharthaFeature from "@/components/PurusharthaFeature";
 
 const Index = () => {
   return (
