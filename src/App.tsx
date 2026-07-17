@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import YogaSutraStudy from "./pages/YogaSutraStudy";
 import NavratriSadhana from "./pages/NavratriSadhana";
 import OneOnOneSessions from "./pages/OneOnOneSessions";
+import Purushartha from "./pages/Purushartha";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/yoga-sutra-study" element={<YogaSutraStudy />} />
           <Route path="/navratri-sadhana" element={<NavratriSadhana />} />
           <Route path="/one-on-one" element={<OneOnOneSessions />} />
+          <Route path="/purushartha" element={<Purushartha />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
