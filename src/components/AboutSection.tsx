@@ -1,4 +1,4 @@
-import ashimaPhoto from "@/assets/ashima-photo.jpg";
+import ashimaPhoto from "@/assets/ashima-photo.jpg.asset.json";
 
 const AboutSection = () => {
   return (
