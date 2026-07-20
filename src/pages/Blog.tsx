@@ -236,7 +236,7 @@ const Blog = () => {
                         <button
                           key={t}
                           onClick={() => setActiveTag(t)}
-                          className="font-body text-[10px] tracking-wider uppercase text-foreground/50 hover:text-brand transition-colors"
+                          className="font-body text-[10px] tracking-wider uppercase text-foreground/50 hover:text-brand hover:underline underline-offset-4 transition-all"
                         >
                           #{t}
                         </button>

@@ -22,10 +22,7 @@ const ContactSection = () => {
           Whether you're drawn to a specific offering, have a question about fit, or simply
           want to say hello, you're welcome to write. I respond personally.
         </p>
-        <a
-          href="mailto:team@unlockascend.com"
-          className="inline-block font-body text-sm tracking-widest uppercase text-primary border-b border-primary pb-1 hover:opacity-70 transition-opacity"
-        >
+        <a href="mailto:team@unlockascend.com" className="btn-primary">
           team@unlockascend.com
         </a>
       </div>

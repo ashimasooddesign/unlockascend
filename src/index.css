@@ -101,3 +101,21 @@
     );
   }
 }
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 font-body text-sm tracking-widest uppercase text-primary-foreground bg-brand border border-brand rounded-md px-5 py-2.5 hover:bg-brand/90 hover:border-brand/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 font-body text-sm tracking-widest uppercase text-brand border border-brand/40 rounded-md px-5 py-2.5 hover:bg-brand hover:text-primary-foreground hover:border-brand transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  .link-action {
+    @apply inline-flex items-center gap-1.5 font-body text-sm tracking-widest uppercase text-brand hover:text-brand/80 transition-colors underline underline-offset-4;
+  }
+
+  .link-subtle {
+    @apply font-body text-sm text-primary underline underline-offset-4 hover:text-foreground transition-colors;
+  }
+}

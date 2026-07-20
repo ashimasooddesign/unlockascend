@@ -53,10 +53,7 @@ const BlogPost = () => {
       <SiteHeader />
       <main className="flex-1 pt-32 pb-24">
         <article className="container max-w-2xl">
-          <Link
-            to="/blog"
-            className="font-body text-xs tracking-widest uppercase text-primary/70 hover:text-primary transition-colors"
-          >
+          <Link to="/blog" className="link-subtle">
             ← All writing
           </Link>
 
@@ -107,7 +104,7 @@ const BlogPost = () => {
               href={post.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block font-body text-xs tracking-widest uppercase text-primary hover:text-foreground transition-colors"
+              className="btn-secondary"
             >
               Read on Substack →
             </a>
