@@ -79,7 +79,7 @@ const TestimonialsSection = () => {
           <div className="flex justify-center mt-12">
             <button
               onClick={() => setExpanded(true)}
-              className="inline-flex items-center gap-1.5 font-body text-sm text-brand hover:opacity-70 transition-opacity"
+              className="btn-secondary"
             >
               Read more reflections
               <ChevronDown className="w-4 h-4" />

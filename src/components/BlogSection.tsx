@@ -79,7 +79,7 @@ const BlogSection = () => {
                 href={SUBSTACK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-4 hover:text-brand transition-colors"
+                className="link-subtle"
               >
                 Substack
               </a>
@@ -90,7 +90,7 @@ const BlogSection = () => {
             href={SUBSTACK_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body text-xs tracking-widest uppercase text-brand border-b border-brand pb-1 hover:opacity-70 transition-opacity"
+            className="btn-secondary"
           >
             View all
           </a>
@@ -117,7 +117,7 @@ const BlogSection = () => {
               href={SUBSTACK_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:text-brand transition-colors"
+              className="link-action"
             >
               Read on Substack →
             </a>
