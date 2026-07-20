@@ -23,7 +23,7 @@ const CredibilityStrip = () => {
                 className="max-h-full w-auto object-contain"
               />
             </div>
-            <p className="font-body text-xs text-muted-foreground/80 text-center max-w-[12rem]">
+            <p className="font-body text-xs text-muted-foreground/80 text-center max-w-[12rem] group-hover:text-foreground group-hover:underline underline-offset-4 transition-all">
               Narcissistic abuse survivor community
             </p>
           </a>
@@ -40,7 +40,7 @@ const CredibilityStrip = () => {
                 className="max-h-[40%] w-auto object-contain"
               />
             </div>
-            <p className="font-body text-xs text-muted-foreground/80 text-center max-w-[12rem]">
+            <p className="font-body text-xs text-muted-foreground/80 text-center max-w-[12rem] group-hover:text-foreground group-hover:underline underline-offset-4 transition-all">
               Sustainable clothing brand
             </p>
           </a>
@@ -57,7 +57,7 @@ const CredibilityStrip = () => {
                 className="max-h-[55%] w-auto object-contain"
               />
             </div>
-            <p className="font-body text-xs text-muted-foreground/80 text-center max-w-[12rem]">
+            <p className="font-body text-xs text-muted-foreground/80 text-center max-w-[12rem] group-hover:text-foreground group-hover:underline underline-offset-4 transition-all">
               Spiritual learning platform
             </p>
           </a>
