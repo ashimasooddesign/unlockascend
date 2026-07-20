@@ -141,7 +141,7 @@ const SiteHeader = () => {
             <a
               key={item.href}
               href={item.href}
-              className="font-body text-xs tracking-widest uppercase text-brand hover:opacity-70 transition-opacity"
+              className="font-body text-xs tracking-widest uppercase text-brand hover:opacity-80 hover:underline underline-offset-4 transition-all"
             >
               {item.label}
             </a>
@@ -161,7 +161,7 @@ const SiteHeader = () => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="font-body text-sm tracking-widest uppercase text-brand hover:opacity-70 transition-opacity"
+                className="font-body text-sm tracking-widest uppercase text-brand hover:opacity-80 hover:underline underline-offset-4 transition-all"
               >
                 {item.label}
               </a>

@@ -47,10 +47,7 @@ const PurusharthaFeature = () => {
           </div>
 
           <div className="flex justify-center md:justify-end">
-            <Link
-              to="/purushartha"
-              className="inline-flex items-center gap-2 font-body text-sm tracking-[0.2em] uppercase text-primary hover:text-foreground transition-colors underline underline-offset-8 whitespace-nowrap"
-            >
+            <Link to="/purushartha" className="btn-secondary">
               Learn more →
             </Link>
           </div>

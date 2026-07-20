@@ -35,19 +35,16 @@ const UpcomingSessionsSection = () => {
                 <span>Maximum 10 participants - application required</span>
               </li>
             </ul>
-            <div className="pt-3 flex flex-wrap items-center gap-x-6 gap-y-2">
+            <div className="pt-3 flex flex-wrap items-center gap-x-4 gap-y-3">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSeOBlW7ludogmikvOidGxVjYvQKZdxS8fIFqCy0yn6brT17Qw/viewform?usp=header"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 font-body text-sm tracking-widest uppercase text-primary hover:text-foreground transition-colors underline underline-offset-4"
+                className="btn-primary"
               >
                 Apply now →
               </a>
-              <a
-                href="/yoga-sutra-study"
-                className="inline-flex items-center gap-1.5 font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <a href="/yoga-sutra-study" className="btn-secondary">
                 Learn more
               </a>
             </div>
@@ -78,20 +75,14 @@ const UpcomingSessionsSection = () => {
                 <span>Chanting, mudras &amp; chakra balancing</span>
               </li>
             </ul>
-            <div className="pt-1 flex flex-wrap items-center gap-x-6 gap-y-2">
+            <div className="pt-1 flex flex-wrap items-center gap-x-4 gap-y-3">
               <p className="font-body text-sm text-muted-foreground/80 italic">
                 Registration opens soon.{" "}
-                <a
-                  href="#connect"
-                  className="underline underline-offset-4 hover:text-foreground transition-colors not-italic"
-                >
+                <a href="#connect" className="link-action not-italic">
                   reach out to be notified first →
                 </a>
               </p>
-              <a
-                href="/navratri-sadhana"
-                className="inline-flex items-center gap-1.5 font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <a href="/navratri-sadhana" className="btn-secondary">
                 Learn more
               </a>
             </div>
