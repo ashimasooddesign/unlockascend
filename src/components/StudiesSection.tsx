@@ -33,7 +33,7 @@ const StudiesSection = () => {
                   href="https://docs.google.com/document/d/1S5pF-iiPAcWJOO43VfT24fkY2kixDyu_rs95WzhMzFo/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 font-body text-sm tracking-widest uppercase text-primary hover:text-foreground transition-colors underline underline-offset-4"
+                  className="link-action"
                 >
                   Details of ongoing program →
                 </a>

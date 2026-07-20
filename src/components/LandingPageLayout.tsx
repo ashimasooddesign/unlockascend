@@ -100,7 +100,7 @@ const LandingPageLayout = ({
               {...(ctaHref.startsWith("http")
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
-              className="inline-flex items-center gap-2 font-body text-sm tracking-[0.2em] uppercase text-primary hover:text-foreground transition-colors underline underline-offset-8"
+              className="btn-primary"
             >
               {ctaLabel} →
             </a>
@@ -108,7 +108,7 @@ const LandingPageLayout = ({
               <p className="mt-4 font-body text-sm text-muted-foreground italic">{ctaNote}</p>
             )}
             <p className="mt-8 font-body text-xs tracking-widest uppercase text-muted-foreground">
-              <a href="/" className="hover:text-foreground transition-colors">← Back to Ascend</a>
+              <a href="/" className="link-subtle">← Back to Ascend</a>
             </p>
           </section>
         </article>

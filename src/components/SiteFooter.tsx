@@ -10,7 +10,7 @@ const SiteFooter = () => {
             href="https://www.trustpilot.com/review/unlockascend.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+            className="font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all"
           >
             Trustpilot
           </a>
@@ -18,7 +18,7 @@ const SiteFooter = () => {
             href="https://ascendwithashima.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+            className="font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all"
           >
             Substack
           </a>
@@ -26,7 +26,7 @@ const SiteFooter = () => {
             href="https://www.instagram.com/unlockascend/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+            className="font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all"
           >
             Instagram
           </a>
