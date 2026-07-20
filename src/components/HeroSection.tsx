@@ -31,18 +31,18 @@ const HeroSection = () => {
           Grounded guidance for those seeking clarity — not coping — through traditional practice,
           self-inquiry, and a return to what is essential.
         </p>
-        <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
+        <div className="mt-6 flex flex-wrap gap-x-4 gap-y-3">
           <a
             href="#sessions"
-            className="font-body text-sm md:text-base text-brand hover:opacity-70 transition-opacity"
+            className="inline-flex items-center justify-center font-body text-sm tracking-widest uppercase text-brand border border-brand/40 rounded-md px-5 py-2.5 hover:bg-brand hover:text-primary-foreground hover:border-brand transition-colors"
           >
-            Upcoming sessions →
+            Upcoming sessions
           </a>
           <a
             href="#connect"
-            className="font-body text-sm md:text-base text-brand hover:opacity-70 transition-opacity"
+            className="inline-flex items-center justify-center font-body text-sm tracking-widest uppercase text-brand border border-brand/40 rounded-md px-5 py-2.5 hover:bg-brand hover:text-primary-foreground hover:border-brand transition-colors"
           >
-            Begin a conversation →
+            Begin a conversation
           </a>
         </div>
       </div>
