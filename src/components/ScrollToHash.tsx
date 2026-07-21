@@ -12,8 +12,8 @@ const ScrollToHash = () => {
 
   useEffect(() => {
     if (!hash) {
-      // On plain route change, jump to top
-      window.scrollTo({ top: 0, behavior: "auto" });
+      // On plain route change, jump to top instantly (bypasses CSS smooth scroll)
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
       return;
     }
     const id = hash.slice(1);
