@@ -1,5 +1,3 @@
-import ashimaPhoto from "@/assets/ashima-photo.jpg.asset.json";
-
 const AboutSection = () => {
   return (
     <section id="about" aria-label="About Ashima Sood" className="py-24 md:py-36 wash-sage">
@@ -8,10 +6,14 @@ const AboutSection = () => {
           About Ashima
         </h2>
         <div className="flex flex-col md:flex-row gap-10 md:gap-14 items-start">
-          <div className="w-48 h-60 md:w-56 md:h-72 flex-shrink-0 rounded-md overflow-hidden">
+          <div className="w-48 h-60 md:w-56 md:h-72 flex-shrink-0 rounded-md overflow-hidden bg-muted">
             <img
-              src={ashimaPhoto.url}
+              src="/ashima-photo.jpg"
               alt="Ashima Sood"
+              loading="lazy"
+              decoding="async"
+              width={765}
+              height={1280}
               className="w-full h-full object-cover object-top"
             />
           </div>
