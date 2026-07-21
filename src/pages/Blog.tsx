@@ -196,7 +196,7 @@ const Blog = () => {
             <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {filtered.map((p) => (
                 <li key={p.slug} className="group flex flex-col">
-                  <Link to={`/blog/${p.slug}`} className="block overflow-hidden rounded-sm bg-muted/40 aspect-[16/9] mb-4">
+                  <Link to={`/blog/${p.slug}`} className="block overflow-hidden rounded-sm bg-muted/40 aspect-[2/1] mb-4">
                     {p.image ? (
                       <img
                         src={p.image}
