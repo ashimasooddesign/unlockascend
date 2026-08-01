@@ -66,7 +66,7 @@ const YogaSutraStudy = () => {
       title="Yoga Sutra Study"
       lead="A close reading of Patanjali's Yoga Sutra — structured not as information, but as a framework for understanding your patterns, your thoughts, and the reality you live in."
       ctaHref="https://docs.google.com/forms/d/e/1FAIpQLSeOBlW7ludogmikvOidGxVjYvQKZdxS8fIFqCy0yn6brT17Qw/viewform?usp=header"
-      ctaLabel="Apply for Semester 1"
+      ctaLabel="Apply for Batch 2"
       ctaNote="Maximum 10 participants. Application required."
       faqs={faqs}
     >
