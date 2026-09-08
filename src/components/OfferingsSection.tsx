@@ -17,7 +17,7 @@ const offerings = [
     title: "Scripture Study",
     description:
       "Small-group inquiry into the <em>Bhagavad Gita</em>, <em>Yoga Sutra</em>, <em>Devi Mahatmyam</em>, and <em>Garbhopanishad</em> - reading slowly, together.",
-    meta: 'Small group, application required · <a href="#sessions" class="link-action">see Upcoming Sessions →</a>',
+    meta: 'One-on-one, begin when you are ready · <a href="mailto:team@unlockascend.com?subject=Scripture%20Study" class="link-action">write to begin →</a>',
   },
   {
     title: "One-on-One Sessions",

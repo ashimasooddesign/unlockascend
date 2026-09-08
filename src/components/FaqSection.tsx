@@ -32,13 +32,14 @@ const faqs = [
     a: "We read slowly. A typical session involves reading a passage from the text together, sitting with it, discussing what it's asking of us, not just intellectually, but in terms of how we actually live. There's no rushing through chapters to cover content. The pace is deliberate, and the conversation tends to go places a lecture format never could.",
   },
   {
-    q: "Why do you cap groups at 10 participants?",
-    a: "Because that's the number at which real conversation is still possible. Beyond that, people start performing rather than inquiring. The small size also means I can actually track where each person is in their understanding and practice, something that matters a lot when you're working with texts this layered.",
+    q: "Can I study one-on-one?",
+    a: "Yes. The Yoga Sutra study currently runs one-on-one, which means we begin when you are ready and move at a pace shaped around your life. Write to me and we will talk about where you are and what you are looking for.",
   },
   {
-    q: "Why is there an application process?",
-    a: "Partly because of the small group size, there simply isn't room for everyone. But more importantly, these study circles work best when everyone in the room is genuinely committed to the process. A short application helps me understand where you are, what you're looking for, and whether this particular offering is the right fit for you right now. It's not about qualification, it's about fit.",
+    q: "Is there a waitlist for small-group study?",
+    a: "There is. Small groups are kept to around ten people, because that is the number at which real conversation is still possible. When the next group opens, those on the waitlist hear first. Write in and I will add you.",
   },
+
   {
     q: "Are the sessions online or in person?",
     a: "All sessions are currently online, which means participants join from across the world. In my experience this hasn't diminished the quality of the study. If anything, it's brought together people who wouldn't have found each other otherwise. You'll need a stable internet connection, a quiet space, and the willingness to show up fully.",
