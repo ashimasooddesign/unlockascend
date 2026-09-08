@@ -92,16 +92,21 @@ const YogaSutraStudy = () => {
         Format
       </h2>
       <ul className="space-y-3 list-none pl-0">
-        <li>✦ Two hours of live online study each week</li>
-        <li>✦ I hang back for 30 minutes after each session for questions and integration</li>
+        <li>✦ Around two hours of live one-on-one study each week</li>
+        <li>✦ Time kept open after each session for questions and integration</li>
         <li>✦ You will have my support throughout to self-evaluate and apply what you learn</li>
         <li>✦ Live assignments during sessions</li>
         <li>✦ Take-home assignments to deepen the work</li>
         <li>✦ Recordings available for lifetime access</li>
       </ul>
       <p className="font-body text-sm text-muted-foreground italic">
-        August 22 - December 14, 2026. Third Saturday of each month off.
+        No fixed dates. We begin when you are ready, at a pace and rhythm that suits your life. If
+        you would prefer to study in a small group,{" "}
+        <a href="mailto:team@unlockascend.com?subject=Yoga%20Sutra%20Study%20Waitlist" className="link-action not-italic">
+          ask to join the waitlist →
+        </a>
       </p>
+
 
       <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
         What you can expect
