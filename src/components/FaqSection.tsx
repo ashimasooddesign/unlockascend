@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: "What's the time commitment for a study circle like the Yoga Sutra Study?",
-    a: "The Yoga Sutra Study runs 14 weeks with three live sessions per week, Monday, Wednesday, and Friday. Beyond the live sessions, I'd suggest setting aside some time each day to sit with what's come up, even if it's just 10 minutes. This isn't a course you can passively consume. It asks something of you between sessions too.",
+    a: "Around two hours of live study each week, scheduled with you rather than fixed in advance. Beyond the live sessions, I'd suggest setting aside some time each day to sit with what's come up, even if it's just 10 minutes. This isn't a course you can passively consume. It asks something of you between sessions too.",
   },
   {
     q: "What is Ayurvedic guidance, and how does it work in practice?",
