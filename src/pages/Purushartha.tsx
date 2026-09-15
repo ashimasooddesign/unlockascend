@@ -65,7 +65,7 @@ const Purushartha = () => {
       eyebrow="A Private Mentorship"
       title="Purushartha"
       lead="The four aims that, together, make a whole life. A one-on-one mentorship for people who have already done the workshops, read the books, and tried the usual coaching — and are ready to meet what is underneath."
-      ctaHref="/#connect"
+      ctaHref="https://unlockascend.gumroad.com/l/discoverpurushartha"
       ctaLabel="Book a discovery call"
       ctaNote="I respond personally. — Ashima"
       faqs={faqs}
