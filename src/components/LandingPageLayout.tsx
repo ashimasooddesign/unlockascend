@@ -19,8 +19,8 @@ interface LandingPageLayoutProps {
   lead: string;
   children: ReactNode;
   faqs: FaqItem[];
-  ctaHref: string;
-  ctaLabel: string;
+  ctaHref?: string;
+  ctaLabel?: string;
   ctaNote?: string;
 }
 
