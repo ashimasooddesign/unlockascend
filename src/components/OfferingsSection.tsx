@@ -2,10 +2,22 @@ import offeringImage from "@/assets/offering-stilllife.jpg";
 
 const offerings = [
   {
+    title: "Yoga Sutra Study",
+    description:
+      "A close reading of Patanjali's <em>Yoga Sutra</em> - structured as a practical framework for understanding your patterns, thoughts, and lived reality.",
+    meta: 'One-on-one · begin when you are ready — <a href="/yoga-sutra-study" class="link-action">Learn more →</a> · <a href="mailto:team@unlockascend.com?subject=Yoga%20Sutra%20Study" class="link-action">write to begin →</a>',
+  },
+  {
+    title: "Sharad Navratri Sadhana",
+    description:
+      "Nine days of devotion, discipline, and inner alignment - <em>Devi Mahatmyam</em> study, Ayurvedic fasting, chanting, and mudras, woven into the sacred rhythm of Navratri.",
+    meta: 'October 11 - 19, 2026 · 9-day immersive — <a href="/navratri-sadhana" class="link-action">Join the sadhana →</a>',
+  },
+  {
     title: "Yoga & Meditation",
     description:
       "<em>Asana</em>, <em>pranayama</em>, and seated meditation rooted in classical tradition - practiced with patience, not performance.",
-    meta: 'Group sessions online · offered seasonally — <a href="#sessions" class="link-action">see Upcoming Sessions →</a>',
+    meta: 'Group sessions online · offered seasonally — <a href="#connect" class="link-action">begin a conversation →</a>',
   },
   {
     title: "Ayurvedic Guidance",

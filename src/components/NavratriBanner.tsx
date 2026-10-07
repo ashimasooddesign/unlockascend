@@ -13,7 +13,7 @@ const NavratriBanner = () => {
     <div
       role="region"
       aria-label="Navratri Sadhana announcement"
-      className="bg-brand text-brand-foreground"
+      className="bg-brand text-primary-foreground"
     >
       <div className="container max-w-5xl flex items-center justify-center gap-3 py-2.5 px-4 text-center">
         <p className="font-body text-xs md:text-sm tracking-wide">
