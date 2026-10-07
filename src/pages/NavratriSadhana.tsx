@@ -1,7 +1,12 @@
 import LandingPageLayout, { FaqItem } from "@/components/LandingPageLayout";
 import { useSeo } from "@/hooks/useSeo";
 
-const GUMROAD_URL = "https://unlockascend.gumroad.com/l/Navratri26";
+const STUDY_URL =
+  "https://topmate.io/ashima_sood/2338894/pay?utm_source=public_profile&utm_campaign=ashima_sood&skipped_service_page=1";
+const SADHANA_URL =
+  "https://topmate.io/ashima_sood/2338667/pay?utm_source=public_profile&utm_campaign=ashima_sood&skipped_service_page=1";
+const COMPLETE_URL =
+  "https://topmate.io/ashima_sood/2338933/pay?utm_source=public_profile&utm_campaign=ashima_sood&skipped_service_page=1";
 
 const faqs: FaqItem[] = [
   {
@@ -12,7 +17,7 @@ const faqs: FaqItem[] = [
   {
     question: "What are the three ways to participate?",
     answer:
-      "There are three options: the Devi Mahatmyam Study (three live 90-minute sessions on Saptami, Ashtami and Navami, ₹3,999 / $50), the Navratri Sadhana (nine days of guided practice, ₹4,444 / $60), and the Complete Navratri Sadhana + Devi Mahatmyam Immersion (₹7,777 / $95), which combines both and is the recommended option.",
+      "There are three options: the Complete Navratri Sadhana + Devi Mahatmyam Immersion (₹7,777 / $95), which combines both and is the recommended option, the Navratri Sadhana (nine days of guided practice, ₹4,444 / $60), and the Devi Mahatmyam Study (three live 90-minute sessions on Saptami, Ashtami and Navami, ₹3,999 / $50).",
   },
   {
     question: "What time are the sessions?",
@@ -63,10 +68,10 @@ const jsonLd = {
   offers: [
     {
       "@type": "Offer",
-      name: "Devi Mahatmyam Study",
-      price: "50",
+      name: "Complete Navratri Sadhana + Devi Mahatmyam Immersion",
+      price: "95",
       priceCurrency: "USD",
-      url: GUMROAD_URL,
+      url: COMPLETE_URL,
       availability: "https://schema.org/InStock",
     },
     {
@@ -74,15 +79,15 @@ const jsonLd = {
       name: "Navratri Sadhana",
       price: "60",
       priceCurrency: "USD",
-      url: GUMROAD_URL,
+      url: SADHANA_URL,
       availability: "https://schema.org/InStock",
     },
     {
       "@type": "Offer",
-      name: "Complete Navratri Sadhana + Devi Mahatmyam Immersion",
-      price: "95",
+      name: "Devi Mahatmyam Study",
+      price: "50",
       priceCurrency: "USD",
-      url: GUMROAD_URL,
+      url: STUDY_URL,
       availability: "https://schema.org/InStock",
     },
   ],
@@ -104,9 +109,6 @@ const NavratriSadhana = () => {
       eyebrow="Nine Days · October 11 – 19, 2026"
       title="Navratri Sadhana 2026"
       lead="Nine days of practice, contemplation and relationship with the Devi, held in a small guided group online."
-      ctaHref={GUMROAD_URL}
-      ctaLabel="Join Navratri Sadhana"
-      ctaNote="The Zoom link is shared closer to the start date. Recordings are uploaded after each live session."
       faqs={faqs}
     >
       <p>
@@ -119,18 +121,28 @@ const NavratriSadhana = () => {
         Three ways to participate
       </h2>
       <ol className="space-y-8 list-none pl-0">
-        <li>
+        <li className="border border-border/60 bg-secondary/40 p-6">
+          <p className="font-body text-[11px] tracking-[0.25em] uppercase text-primary/80 mb-2">
+            Recommended
+          </p>
           <h3 className="font-display text-xl font-normal text-foreground mb-1">
-            1. Devi Mahatmyam Study
+            1. Complete Navratri Sadhana + Devi Mahatmyam Immersion
           </h3>
           <p className="font-body text-sm tracking-[0.18em] uppercase text-primary/80 mb-2">
-            ₹3,999 / $50
+            ₹7,777 / $95
           </p>
           <p>
-            Three live 90-minute sessions on Saptami, Ashtami and Navami. For people who already
-            have their own Navratri practice and want focused study of the{" "}
-            <em className="font-display">Devi Mahatmyam</em>.
+            The complete nine-day Sadhana plus all three 90-minute{" "}
+            <em className="font-display">Devi Mahatmyam</em> study sessions.
           </p>
+          <a
+            href={COMPLETE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary mt-4 inline-block"
+          >
+            Join the complete program →
+          </a>
         </li>
         <li>
           <h3 className="font-display text-xl font-normal text-foreground mb-1">
@@ -144,30 +156,64 @@ const NavratriSadhana = () => {
             bija mantra recitation, Devi sadhana and upasana, contemplative practices and
             Ayurvedic fasting guidance.
           </p>
+          <a
+            href={SADHANA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary mt-4 inline-block"
+          >
+            Join Navratri Sadhana →
+          </a>
         </li>
-        <li className="border border-border/60 bg-secondary/40 p-6">
-          <p className="font-body text-[11px] tracking-[0.25em] uppercase text-primary/80 mb-2">
-            Recommended
-          </p>
+        <li>
           <h3 className="font-display text-xl font-normal text-foreground mb-1">
-            3. Complete Navratri Sadhana + Devi Mahatmyam Immersion
+            3. Devi Mahatmyam Study
           </h3>
           <p className="font-body text-sm tracking-[0.18em] uppercase text-primary/80 mb-2">
-            ₹7,777 / $95
+            ₹3,999 / $50
           </p>
           <p>
-            The complete nine-day Sadhana plus all three 90-minute{" "}
-            <em className="font-display">Devi Mahatmyam</em> study sessions.
+            Three live 90-minute sessions on Saptami, Ashtami and Navami. For people who already
+            have their own Navratri practice and want focused study of the{" "}
+            <em className="font-display">Devi Mahatmyam</em>.
           </p>
+          <a
+            href={STUDY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary mt-4 inline-block"
+          >
+            Join the study →
+          </a>
         </li>
       </ol>
 
       <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">Schedule</h2>
-      <p>
-        Daily Sadhana sessions begin at 6:00 PM IST (7:30 AM US Central / 2:30 PM Central European
-        Time). On Saptami, Ashtami and Navami, the live sessions begin at 5:30 PM IST (7:00 AM US
-        Central / 1:30 PM Central European Time) and run for 90 minutes.
-      </p>
+      <ul className="space-y-3 list-none pl-0">
+        <li className="flex items-start gap-3">
+          <span className="text-primary mt-0.5">✦</span>
+          <span>
+            <strong className="font-normal text-foreground">Daily Sadhana</strong> · 6:00 PM IST
+            (7:30 AM US Central / 2:30 PM Central European Time)
+          </span>
+        </li>
+        <li className="flex items-start gap-3">
+          <span className="text-primary mt-0.5">✦</span>
+          <span>
+            <strong className="font-normal text-foreground">
+              Saptami, Ashtami &amp; Navami
+            </strong>{" "}
+            · 5:30 PM IST (7:00 AM US Central / 1:30 PM Central European Time), 90 minutes
+          </span>
+        </li>
+        <li className="flex items-start gap-3">
+          <span className="text-primary mt-0.5">✦</span>
+          <span>
+            <strong className="font-normal text-foreground">Recordings</strong> · uploaded after
+            each live session, so you can follow at your own pace
+          </span>
+        </li>
+      </ul>
 
       <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
         Before Navratri begins
