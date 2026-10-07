@@ -1,6 +1,5 @@
 import SiteHeader from "@/components/SiteHeader";
 import HeroSection from "@/components/HeroSection";
-import UpcomingSessionsSection from "@/components/UpcomingSessionsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CredibilityStrip from "@/components/CredibilityStrip";
 import AboutSection from "@/components/AboutSection";
@@ -16,11 +15,13 @@ import ForYouSection from "@/components/ForYouSection";
 import ReturningSection from "@/components/ReturningSection";
 import FaqSection from "@/components/FaqSection";
 import PurusharthaFeature from "@/components/PurusharthaFeature";
+import NavratriBanner from "@/components/NavratriBanner";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
+      <NavratriBanner />
       <main>
         <AnimatedSection>
           <HeroSection />
@@ -34,10 +35,6 @@ const Index = () => {
         </AnimatedSection>
         <AnimatedSection>
           <ReturningSection />
-        </AnimatedSection>
-        <MarkDivider />
-        <AnimatedSection>
-          <UpcomingSessionsSection />
         </AnimatedSection>
         <MarkDivider />
         <AnimatedSection>
