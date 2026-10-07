@@ -32,8 +32,8 @@ const HeroSection = () => {
           self-inquiry, and a return to what is essential.
         </p>
         <div className="mt-6 flex flex-wrap gap-x-4 gap-y-3">
-          <a href="#sessions" className="btn-secondary">
-            Upcoming sessions
+          <a href="#offerings" className="btn-secondary">
+            Explore offerings
           </a>
           <a href="#connect" className="btn-secondary">
             Begin a conversation
