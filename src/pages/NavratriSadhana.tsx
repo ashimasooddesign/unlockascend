@@ -1,7 +1,5 @@
 import LandingPageLayout, { FaqItem } from "@/components/LandingPageLayout";
 import { useSeo } from "@/hooks/useSeo";
-import ashimaSadhana from "@/assets/ashima-sadhana.jpg.asset.json";
-import devimahatmyamBook from "@/assets/devimahatmyam-book.jpg.asset.json";
 
 const STUDY_URL =
   "https://topmate.io/ashima_sood/2338894/pay?utm_source=public_profile&utm_campaign=ashima_sood&skipped_service_page=1";
@@ -121,7 +119,7 @@ const NavratriSadhana = () => {
 
       <figure>
         <img
-          src={ashimaSadhana.url}
+          src="/ashima-sadhana.jpg"
           alt="Ashima Sood seated in evening sadhana beside a lit diya"
           className="w-full aspect-[4/3] object-cover rounded-xl"
           loading="lazy"
@@ -257,7 +255,7 @@ const NavratriSadhana = () => {
       <div className="flex flex-col items-center sm:flex-row sm:items-start gap-6">
         <figure className="sm:w-40 shrink-0">
           <img
-            src={devimahatmyamBook.url}
+            src="/devimahatmyam-book.jpg"
             alt="Devimahatmyam by Dr. Ketu Ramachandrasekhar, the translation used in the study"
             className="w-44 max-w-full rounded-lg sm:w-full"
             loading="lazy"
