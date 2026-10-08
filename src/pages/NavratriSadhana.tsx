@@ -1,5 +1,7 @@
 import LandingPageLayout, { FaqItem } from "@/components/LandingPageLayout";
 import { useSeo } from "@/hooks/useSeo";
+import ashimaSadhana from "@/assets/ashima-sadhana.jpg.asset.json";
+import devimahatmyamBook from "@/assets/devimahatmyam-book.jpg.asset.json";
 
 const STUDY_URL =
   "https://topmate.io/ashima_sood/2338894/pay?utm_source=public_profile&utm_campaign=ashima_sood&skipped_service_page=1";
@@ -116,6 +118,20 @@ const NavratriSadhana = () => {
         meditation, chanting, bija mantra recitation, Ayurvedic fasting guidance, contemplation,
         and a three-day <em className="font-display">Devi Mahatmyam</em> immersion.
       </p>
+
+      <figure>
+        <img
+          src={ashimaSadhana.url}
+          alt="Ashima Sood seated in evening sadhana beside a lit diya"
+          className="w-full aspect-[4/3] object-cover rounded-xl"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption className="mt-3 font-body text-xs tracking-[0.25em] uppercase text-muted-foreground">
+          Evening sadhana during Navratri
+        </figcaption>
+      </figure>
+
 
       <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
         Three ways to participate

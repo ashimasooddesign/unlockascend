@@ -21,7 +21,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
-      <NavratriBanner />
+      {/* Spacer clears the fixed header so the banner sits below the navbar and logo */}
+      <div className="pt-[72px]">
+        <NavratriBanner />
+      </div>
       <main>
         <AnimatedSection>
           <HeroSection />
