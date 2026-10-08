@@ -117,6 +117,20 @@ const NavratriSadhana = () => {
         and a three-day <em className="font-display">Devi Mahatmyam</em> immersion.
       </p>
 
+      <figure>
+        <img
+          src="/ashima-sadhana.jpg"
+          alt="Ashima Sood seated in evening sadhana beside a lit diya"
+          className="w-full aspect-[4/3] object-cover rounded-xl"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption className="mt-3 font-body text-xs tracking-[0.25em] uppercase text-muted-foreground">
+          Evening sadhana during Navratri
+        </figcaption>
+      </figure>
+
+
       <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
         Three ways to participate
       </h2>
@@ -238,14 +252,28 @@ const NavratriSadhana = () => {
       <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
         The Devi Mahatmyam
       </h2>
-      <p>
-        On Saptami, Ashtami and Navami, the <em className="font-display">Devi Mahatmyam</em> is
-        explored as a tale of inner conflict, with attention to its narrative, philosophical and
-        contemplative dimensions. The primary reference for the study is Dr. Ketu Ramachandra
-        Shekhar's version and commentary; you are welcome to use another translation alongside the
-        sessions. Each of the three live study sessions is 90 minutes and includes Devi sadhana,
-        upasana, chanting and recitation, study and contemplation.
-      </p>
+      <div className="flex flex-col items-center sm:flex-row sm:items-start gap-6">
+        <figure className="sm:w-40 shrink-0">
+          <img
+            src="/devimahatmyam-book.jpg"
+            alt="Devimahatmyam by Dr. Ketu Ramachandrasekhar, the translation used in the study"
+            className="w-44 max-w-full rounded-lg sm:w-full"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="mt-3 font-body text-xs tracking-[0.2em] uppercase text-muted-foreground text-center sm:text-left">
+            Dr. Ketu Ramachandra Shekhar
+          </figcaption>
+        </figure>
+        <p className="flex-1">
+          On Saptami, Ashtami and Navami, the <em className="font-display">Devi Mahatmyam</em> is
+          explored as a tale of inner conflict, with attention to its narrative, philosophical and
+          contemplative dimensions. The primary reference for the study is Dr. Ketu Ramachandra
+          Shekhar's version and commentary; you are welcome to use another translation alongside the
+          sessions. Each of the three live study sessions is 90 minutes and includes Devi sadhana,
+          upasana, chanting and recitation, study and contemplation.
+        </p>
+      </div>
 
       <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
         Fasting
@@ -273,6 +301,38 @@ const NavratriSadhana = () => {
         Recordings are uploaded after each live session is completed, so you can follow along at
         your own pace.
       </p>
+
+      <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
+        What participants say
+      </h2>
+      <div className="space-y-8">
+        <figure>
+          <blockquote className="font-body text-base md:text-lg text-foreground/90 leading-relaxed italic">
+            "Ashima has been gentle, kind, and sharp… she makes the text feel alive and lived. The
+            small community that forms is also incredibly valuable."
+          </blockquote>
+          <figcaption className="mt-2 font-body text-sm text-muted-foreground">
+            Paul · India · Sharad Navratri 2025
+          </figcaption>
+        </figure>
+        <figure>
+          <blockquote className="font-body text-base md:text-lg text-foreground/90 leading-relaxed italic">
+            "Compassionate wisdom… placing traditional teachings towards a future that supports
+            others."
+          </blockquote>
+          <figcaption className="mt-2 font-body text-sm text-muted-foreground">
+            C. Russell · USA · Sharad Navratri 2025
+          </figcaption>
+        </figure>
+        <figure>
+          <blockquote className="font-body text-base md:text-lg text-foreground/90 leading-relaxed italic">
+            "I believe my skin problem got over after we did the fasting together. Thank you."
+          </blockquote>
+          <figcaption className="mt-2 font-body text-sm text-muted-foreground">
+            Participant · Turkey, 50 · Sharad Navratri 2024
+          </figcaption>
+        </figure>
+      </div>
     </LandingPageLayout>
   );
 };
