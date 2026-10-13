@@ -12,6 +12,7 @@ import OneOnOneSessions from "./pages/OneOnOneSessions";
 import Purushartha from "./pages/Purushartha";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import WhatsAppWidget from "./components/WhatsAppWidget";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <WhatsAppWidget />
     </TooltipProvider>
   </QueryClientProvider>
 );
