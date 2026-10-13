@@ -49,7 +49,7 @@ const reflections = [
       "Her sessions was marked by simplicity and depth. We would often read the sutras (at times requesting repeats), discuss our understandings, ask questions, share experiences, and close with a group meditation.",
       "It's clear that Ashima is a spiritual teacher grounded in experience, deep personal practice, and intentional study. This comes through in the way she holds space, the questions she asks, and how she responds, weaving connections between the Yoga Sutras, Ayurveda, Advaita Vedanta, the Bhagavad Gita, Samkhya philosophy, elements of Western psychology, and more.",
       "Her presence felt grounded yet incisive, humble yet assured, balanced and steady in a way that is rare to find.",
-      "Grateful and heart-full, Ashima Sood 🙏🤍",
+      "Grateful and heart-full 🙏🤍",
     ],
   },
 ];
