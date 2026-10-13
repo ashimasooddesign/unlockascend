@@ -6,5 +6,5 @@
 - [x] Move Paul and C. Russell quotes from homepage testimonials to the Navratri page (India / USA, Sharad Navratri 2025)
 - [x] Add Turkey participant quote (50, Sharad Navratri 2024) to the Navratri page
 - [x] Verify in browser: homepage banner position, Navratri page photos and quotes
-- [ ] Rename the mentorship to "The Purushartha Project" everywhere it appears
+- [x] Rename the mentorship to "The Purushartha Project" everywhere it appears
 - [x] Add a floating WhatsApp support widget linking to +91 8847747693
