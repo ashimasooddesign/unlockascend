@@ -29,6 +29,31 @@ const faqs: FaqItem[] = [
   },
 ];
 
+const reflections = [
+  {
+    name: "Bela",
+    descriptor: "India · Yog Sutra study participant",
+    paragraphs: [
+      "\"Introduction to Patanjali Yoga Sutras by Ashima as the Teacher brought me closer to myself and provided answers to some of my questions on life and living. The profound content of the Chapters and the clear explanation of the sutras by her, through experiences and examples helped me understand better. Verse 2.33 on Pratipaksha bhavanam has become my mool mantra. The revision before the session and consolidation at the end with interconnections during the session, helped put things in perspective. Meditation was another highlight of the sessions. Ashima's energy took me to a calming and reflective space, energising me in a quiet way. The unhurried pace, open-endedness with no prescriptions and her humility helped me internalize and put the learning into action. Look forward to our last Chapter after a short break because of work commitments.\"",
+    ],
+  },
+  {
+    name: "Anchal",
+    descriptor: "CA · Yog Sutra study participant",
+    paragraphs: [
+      "\"It will come to you when it's meant to.\"",
+      "This is something I've heard Ashima say often when speaking about spiritual teachings.",
+      "And in my experience of starting Sutra Studies with Ashima, I feel like it really did.",
+      "I began sutra study sessions with Ashima when I was at a crossroads in my career and life, in a liminal space between two chapters, a time when I was rebuilding and re-evaluating my sense of purpose, direction, and personal values. Our sessions were exactly what I needed.",
+      "Ashima has a rare ability to bring clarity and depth to each conversation. She invited reflection, created space for genuine inquiry, and allowed each persons meaning-making journey to unfold naturally.",
+      "Her sessions was marked by simplicity and depth. We would often read the sutras (at times requesting repeats), discuss our understandings, ask questions, share experiences, and close with a group meditation.",
+      "It's clear that Ashima is a spiritual teacher grounded in experience, deep personal practice, and intentional study. This comes through in the way she holds space, the questions she asks, and how she responds, weaving connections between the Yoga Sutras, Ayurveda, Advaita Vedanta, the Bhagavad Gita, Samkhya philosophy, elements of Western psychology, and more.",
+      "Her presence felt grounded yet incisive, humble yet assured, balanced and steady in a way that is rare to find.",
+      "Grateful and heart-full, Ashima Sood 🙏🤍",
+    ],
+  },
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Course",
@@ -132,6 +157,24 @@ const YogaSutraStudy = () => {
         <li>✦ A judgement-free zone</li>
         <li>✦ Beginners who are feeling called to the texts</li>
       </ul>
+
+      <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
+        What participants say
+      </h2>
+      <div className="space-y-10">
+        {reflections.map((r) => (
+          <figure key={r.name}>
+            <blockquote className="font-body text-base md:text-lg text-foreground/90 leading-relaxed italic space-y-4">
+              {r.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </blockquote>
+            <figcaption className="mt-3 font-body text-sm text-muted-foreground">
+              {r.name} · {r.descriptor}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
     </LandingPageLayout>
   );
 };
