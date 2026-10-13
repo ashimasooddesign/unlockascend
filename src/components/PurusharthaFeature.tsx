@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const PurusharthaFeature = () => {
   return (
     <section
-      aria-label="Featured mentorship — Purushartha"
+      aria-label="Featured mentorship — The Purushartha Project"
       className="border-y border-border/60 bg-secondary/40"
     >
       <div className="container max-w-5xl py-16 md:py-24">
@@ -29,7 +29,7 @@ const PurusharthaFeature = () => {
               New · A Private Mentorship
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-light text-brand leading-tight mb-3">
-              Purushartha
+              The Purushartha Project
             </h2>
             <p className="font-display italic text-lg md:text-xl text-muted-foreground mb-4">
               The four aims that, together, make a whole life.

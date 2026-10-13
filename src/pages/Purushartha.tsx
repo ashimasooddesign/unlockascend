@@ -5,7 +5,7 @@ const faqs: FaqItem[] = [
   {
     question: "How is this different from coaching?",
     answer:
-      "Most coaching picks one domain — career, relationship, mindset — and works it in isolation. Purushartha begins from the premise that the four aims of a life (purpose, means, desire, freedom) are one system. It is trauma-informed, and it draws on classical practice as well as mindset work, so change reaches further than insight and holds under pressure.",
+      "Most coaching picks one domain — career, relationship, mindset — and works it in isolation. The Purushartha Project begins from the premise that the four aims of a life (purpose, means, desire, freedom) are one system. It is trauma-informed, and it draws on classical practice as well as mindset work, so change reaches further than insight and holds under pressure.",
   },
   {
     question: "Who is this mentorship for?",
@@ -25,14 +25,14 @@ const faqs: FaqItem[] = [
   {
     question: "How do I begin?",
     answer:
-      "Write in for a discovery call. It is a short, honest conversation — no pressure — to see whether Purushartha fits where you are and where you are trying to go. Ashima responds personally.",
+      "Write in for a discovery call. It is a short, honest conversation — no pressure — to see whether The Purushartha Project fits where you are and where you are trying to go. Ashima responds personally.",
   },
 ];
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Purushartha — Private Mentorship with Ashima Sood",
+  name: "The Purushartha Project — Private Mentorship with Ashima Sood",
   serviceType: "Private mentorship",
   description:
     "A private, months-long mentorship for those who have outgrown ordinary coaching. Health, relationships, work and money — met at the root, through mindset work, nervous-system practice and classical wisdom.",
@@ -51,19 +51,19 @@ const jsonLd = {
 
 const Purushartha = () => {
   useSeo({
-    title: "Purushartha — A Mentorship Beyond Coaching | Ascend with Ashima Sood",
+    title: "The Purushartha Project — A Mentorship Beyond Coaching | Ascend with Ashima Sood",
     description:
       "A private, months-long mentorship for those who have outgrown ordinary coaching. Health, relationships, work and money, met at the root.",
     canonical: "https://unlockascend.com/purushartha",
     keywords:
-      "Purushartha, private mentorship, trauma informed coaching, yoga mentorship, Ayurveda mentorship, Ashima Sood, Ascend",
+      "The Purushartha Project, purushartha, private mentorship, trauma informed coaching, yoga mentorship, Ayurveda mentorship, Ashima Sood, Ascend",
     jsonLd,
   });
 
   return (
     <LandingPageLayout
       eyebrow="A Private Mentorship"
-      title="Purushartha"
+      title="The Purushartha Project"
       lead="The four aims that, together, make a whole life. A one-on-one mentorship for people who have already done the workshops, read the books, and tried the usual coaching — and are ready to meet what is underneath."
       ctaHref="https://unlockascend.gumroad.com/l/discoverpurushartha"
       ctaLabel="Book a discovery call"
@@ -102,8 +102,9 @@ const Purushartha = () => {
         Most coaching manages the surface. This works at the root.
       </p>
       <p>
-        <em className="font-display">Purushartha</em>, a term from the classical tradition I trained in,
-        names the four aims a life is built from: purpose, means, desire, and freedom. Most coaching picks
+        <em className="font-display">The Purushartha Project</em> is named for
+        <em className="font-display"> purushartha</em>, a term from the classical tradition I trained in,
+        which names the four aims a life is built from: purpose, means, desire, and freedom. Most coaching picks
         one and works it in isolation — a career strategy here, a relationship script there. This
         mentorship starts from a different premise: that the four are one system, and the pattern showing
         up in your business is the same one showing up in your marriage and your body.
