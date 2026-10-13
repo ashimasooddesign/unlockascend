@@ -20,7 +20,7 @@ const faqs: FaqItem[] = [
   {
     question: "Is there a waitlist for small-group study?",
     answer:
-      "Yes. If you would rather study alongside others, write to me and I will add you to the waitlist for the next small group.",
+      "Yes. If you would rather study alongside others, use the 'Join the group waitlist' button on this page to share your details and time zone, and I will write to you when the next small group opens.",
   },
   {
     question: "What will I leave with?",
@@ -124,13 +124,21 @@ const YogaSutraStudy = () => {
         <li>✦ Take-home assignments to deepen the work</li>
         <li>✦ Recordings available for lifetime access</li>
       </ul>
-      <p className="font-body text-sm text-muted-foreground italic">
-        No fixed dates. We begin when you are ready, at a pace and rhythm that suits your life. If
-        you would prefer to study in a small group,{" "}
-        <a href="mailto:team@unlockascend.com?subject=Yoga%20Sutra%20Study%20Waitlist" className="link-action not-italic">
-          ask to join the waitlist →
+      <div className="text-center">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdN6ZQI4HYGP1MjaunsXmg8CMDvAtgWtnPLLqvmG3B3uVWMMg/viewform?usp=publish-editor"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-secondary"
+        >
+          Join the group waitlist →
         </a>
-      </p>
+        <p className="mt-4 font-body text-sm text-muted-foreground italic">
+          No fixed dates. We begin when you are ready, at a pace and rhythm that suits your life.
+          If you would prefer to study in a small group, add your details to the waitlist and I
+          will write to you when the next group opens.
+        </p>
+      </div>
 
 
       <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
