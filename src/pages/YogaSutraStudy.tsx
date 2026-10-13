@@ -90,7 +90,7 @@ const YogaSutraStudy = () => {
       lead="A close reading of Patanjali's Yoga Sutra — structured not as information, but as a framework for understanding your patterns, your thoughts, and the reality you live in."
       ctaHref="mailto:team@unlockascend.com?subject=Yoga%20Sutra%20Study"
       ctaLabel="Write to begin →"
-      ctaNote="Studied one-on-one. Ask to join the waitlist for the next small group."
+      ctaNote="Studied one-on-one. Prefer a small group? Add your details to the waitlist above."
       faqs={faqs}
     >
 
