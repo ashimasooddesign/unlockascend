@@ -1,3 +1,4 @@
+import type React from "react";
 import LandingPageLayout, { FaqItem } from "@/components/LandingPageLayout";
 import { useSeo } from "@/hooks/useSeo";
 
@@ -83,28 +84,57 @@ const YogaSutraStudy = () => {
     jsonLd,
   });
 
+  const H2 = ({ children }: { children: React.ReactNode }) => (
+    <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">{children}</h2>
+  );
+
+  const Actions = ({ note }: { note?: string }) => (
+    <div className="text-center">
+      <div className="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="https://wa.me/918847747693?text=Hello%20Ashima%2C%20I%20am%20interested%20in%20the%20Yoga%20Sutra%20Study." target="_blank" rel="noopener noreferrer" className="btn-primary">
+          Ask a question on WhatsApp →
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN6ZQI4HYGP1MjaunsXmg8CMDvAtgWtnPLLqvmG3B3uVWMMg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+          Join the group waitlist →
+        </a>
+      </div>
+      {note && (
+        <p className="mt-4 font-body text-sm text-muted-foreground italic">{note}</p>
+      )}
+    </div>
+  );
+
   return (
     <LandingPageLayout
       eyebrow="One-on-One · Begin When You Are Ready"
       title="Yoga Sutra Study"
-      lead="A close reading of Patanjali's Yoga Sutra — structured not as information, but as a framework for understanding your patterns, your thoughts, and the reality you live in."
+      lead="A close reading of Patanjali's Yoga Sutra, structured not as information but as a framework for understanding your patterns, your thoughts, and the reality you live in."
       ctaHref="mailto:team@unlockascend.com?subject=Yoga%20Sutra%20Study"
-      ctaLabel="Write to begin →"
-      ctaNote="Studied one-on-one. Prefer a small group? Add your details to the waitlist above."
+      ctaLabel="Or write to begin"
+      ctaNote="Studied one-on-one. Prefer a small group? Join the waitlist above, or message me on WhatsApp."
       faqs={faqs}
     >
+      <Actions note="Studied one-on-one, at your pace. Not sure if it is right for you? Send a message and we will talk it through." />
 
       <p>
         The <em>Yoga Sutra</em> is not a book to be finished. It is a map of the
         mind, written with such density that a single verse can hold a lifetime
-        of practice. In this study, we approach the text as a practical tool — a
+        of practice. In this study, we approach the text as a practical tool: a
         way to understand how your thoughts shape your experience, and to build a
         personal framework that actually works for your life.
       </p>
 
-      <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
-        What we will explore
-      </h2>
+      <H2>Who it is for</H2>
+      <ul className="space-y-3 list-none pl-0">
+        <li>✦ Yoga teachers wanting to deepen their relationship with the text</li>
+        <li>✦ Individuals wanting to explore the Yoga Sutra from a different dimension</li>
+        <li>✦ People wanting to supplement therapy sessions and understand themselves more fully</li>
+        <li>✦ Yogis and sadhaks looking to perform <em>swadhyay</em></li>
+        <li>✦ Beginners who are feeling called to the texts</li>
+        <li>✦ A safe, judgement-free space. I am an ally.</li>
+      </ul>
+
+      <H2>What we will explore</H2>
       <ul className="space-y-3 list-none pl-0">
         <li>✦ A quantum understanding of the text as a living tool</li>
         <li>✦ How to improve your human experience through self-inquiry</li>
@@ -113,9 +143,16 @@ const YogaSutraStudy = () => {
         <li>✦ Coaching and scriptural frameworks interlinked to validate your path</li>
       </ul>
 
-      <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
-        Format
-      </h2>
+      <figure className="border-l-2 border-brand/40 pl-6 py-2">
+        <blockquote className="font-display text-xl md:text-2xl font-light italic text-foreground/90 leading-snug">
+          "Ashima has a rare ability to bring clarity and depth to each conversation."
+        </blockquote>
+        <figcaption className="mt-3 font-body text-sm text-muted-foreground">
+          Anchal · Yog Sutra study participant
+        </figcaption>
+      </figure>
+
+      <H2>Format</H2>
       <ul className="space-y-3 list-none pl-0">
         <li>✦ Around two hours of live one-on-one study each week</li>
         <li>✦ Time kept open after each session for questions and integration</li>
@@ -124,28 +161,10 @@ const YogaSutraStudy = () => {
         <li>✦ Take-home assignments to deepen the work</li>
         <li>✦ Recordings available for lifetime access</li>
       </ul>
-      <div className="text-center">
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdN6ZQI4HYGP1MjaunsXmg8CMDvAtgWtnPLLqvmG3B3uVWMMg/viewform?usp=publish-editor"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-secondary"
-        >
-          Join the group waitlist →
-        </a>
-        <p className="mt-4 font-body text-sm text-muted-foreground italic">
-          No fixed dates. We begin when you are ready, at a pace and rhythm that suits your life.
-          If you would prefer to study in a small group, add your details to the waitlist and I
-          will write to you when the next group opens.
-        </p>
-      </div>
 
-
-      <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
-        What you can expect
-      </h2>
+      <H2>What you can expect</H2>
       <ul className="space-y-3 list-none pl-0">
-        <li>✦ A change in your approach to life — reality shifting</li>
+        <li>✦ A change in your approach to life: reality shifting</li>
         <li>✦ Quantum understanding of how thoughts shape reality</li>
         <li>✦ Clearer thinking</li>
         <li>✦ Coaching and scriptural frameworks interlinked to validate your journey</li>
@@ -153,22 +172,9 @@ const YogaSutraStudy = () => {
         <li>✦ A better approach to challenges</li>
       </ul>
 
-      <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
-        Who it is for
-      </h2>
-      <ul className="space-y-3 list-none pl-0">
-        <li>✦ Yoga teachers wanting to deepen their relationship with the text</li>
-        <li>✦ Individuals wanting to explore the Yoga Sutra from a different dimension</li>
-        <li>✦ People wanting to supplement therapy sessions and understand themselves more fully</li>
-        <li>✦ Yogis and sadhaks looking to perform <em>swadhyay</em></li>
-        <li>✦ A safe space — I am an ally</li>
-        <li>✦ A judgement-free zone</li>
-        <li>✦ Beginners who are feeling called to the texts</li>
-      </ul>
+      <Actions note="No fixed dates. We begin when you are ready. Prefer a small group? Add your details and time zone to the waitlist." />
 
-      <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-6">
-        What participants say
-      </h2>
+      <H2>What participants say</H2>
       <div className="space-y-10">
         {reflections.map((r) => (
           <figure key={r.name}>
