@@ -57,6 +57,27 @@ const LandingPageLayout = ({
       document.getElementById(id)?.remove();
     };
   }, [faqs]);
+
+  const ctaSection = ctaHref && ctaLabel && (
+    <section aria-label="Next step" className="mt-20 md:mt-24 border-t border-border pt-12 text-center">
+      <a
+        href={ctaHref}
+        {...(ctaHref.startsWith("http")
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
+        className="btn-primary"
+      >
+        {ctaLabel} →
+      </a>
+      {ctaNote && (
+        <p className="mt-4 font-body text-sm text-muted-foreground italic">{ctaNote}</p>
+      )}
+      <p className="mt-8 font-body text-xs tracking-widest uppercase text-muted-foreground">
+        <a href="/" className="link-subtle">← Back to Ascend</a>
+      </p>
+    </section>
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
