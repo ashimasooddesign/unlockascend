@@ -34,6 +34,7 @@ const LandingPageLayout = ({
   ctaHref,
   ctaLabel,
   ctaNote,
+  ctaPosition = "bottom",
 }: LandingPageLayoutProps) => {
   useEffect(() => {
     const id = "landing-faq-jsonld";
