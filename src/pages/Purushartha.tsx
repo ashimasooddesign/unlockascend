@@ -51,9 +51,9 @@ const jsonLd = {
 
 const Purushartha = () => {
   useSeo({
-    title: "The Purushartha Project — A Mentorship Beyond Coaching | Ascend with Ashima Sood",
+    title: "The Purushartha Project | Private Mentorship",
     description:
-      "A private, months-long mentorship for those who have outgrown ordinary coaching. Health, relationships, work and money, met at the root.",
+      "Explore personalised mentorship combining self-inquiry, mindset work, contemplative practice, and traditional Indian wisdom to support clearer, more conscious choices.",
     canonical: "https://unlockascend.com/purushartha",
     keywords:
       "The Purushartha Project, purushartha, private mentorship, trauma informed coaching, yoga mentorship, Ayurveda mentorship, Ashima Sood, Ascend",

@@ -75,9 +75,9 @@ const jsonLd = {
 
 const YogaSutraStudy = () => {
   useSeo({
-    title: "Yoga Sutra Study Online — One-on-One with Ashima Sood | Ascend",
+    title: "Yoga Sutra Study with Ashima Sood | Ascend",
     description:
-      "A one-on-one study of Patanjali's Yoga Sutra. Quantum understanding of how thoughts shape reality. Build a framework that works for you. Begin when you are ready.",
+      "Study Patanjali's Yoga Sutras through guided inquiry and explore their relevance to the mind, everyday patterns, and modern life.",
     canonical: "https://unlockascend.com/yoga-sutra-study",
     keywords:
       "Yoga Sutra study, Patanjali Yoga Sutra online, one-on-one scripture study, quantum understanding, swadhyay, Ashima Sood, Ascend",
