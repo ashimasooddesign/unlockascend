@@ -22,6 +22,7 @@ interface LandingPageLayoutProps {
   ctaHref?: string;
   ctaLabel?: string;
   ctaNote?: string;
+  ctaPosition?: "bottom" | "beforeFaq";
 }
 
 const LandingPageLayout = ({
