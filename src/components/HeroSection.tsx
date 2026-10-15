@@ -24,12 +24,19 @@ const HeroSection = () => {
           />
         </h1>
         <p className="font-display text-xl md:text-2xl font-light text-muted-foreground max-w-xl leading-relaxed italic">
-          Spiritual Mentorship · Yoga · Ayurveda · Contemplative study
+          Vedic &amp; yogic wisdom for modern life.
         </p>
         <div className="mt-8 w-12 h-px bg-primary opacity-60" />
-        <p className="mt-6 font-body text-sm md:text-base text-muted-foreground max-w-md leading-relaxed">
-          Grounded guidance for those seeking clarity — not coping — through traditional practice,
-          self-inquiry, and a return to what is essential.
+        <p className="mt-6 font-display text-2xl md:text-3xl font-light text-brand max-w-xl leading-snug">
+          A more conscious way to live, work, and relate.
+        </p>
+        <p className="mt-4 font-body text-sm md:text-base text-muted-foreground max-w-md leading-relaxed">
+          You can build a life that looks right on paper and still feel that something is missing.
+        </p>
+        <p className="mt-3 font-body text-sm md:text-base text-muted-foreground max-w-md leading-relaxed">
+          Ascend brings together classical Indian wisdom, self-inquiry, and contemplative practice to
+          help you understand the patterns shaping your life, reconnect with what matters, and find a
+          more considered way forward.
         </p>
         <div className="mt-6 flex flex-wrap gap-x-4 gap-y-3">
           <a href="#offerings" className="btn-secondary">

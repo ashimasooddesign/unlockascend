@@ -51,9 +51,9 @@ const jsonLd = {
 
 const Purushartha = () => {
   useSeo({
-    title: "The Purushartha Project — A Mentorship Beyond Coaching | Ascend with Ashima Sood",
+    title: "The Purushartha Project | Private Mentorship",
     description:
-      "A private, months-long mentorship for those who have outgrown ordinary coaching. Health, relationships, work and money, met at the root.",
+      "Explore personalised mentorship combining self-inquiry, mindset work, contemplative practice, and traditional Indian wisdom to support clearer, more conscious choices.",
     canonical: "https://unlockascend.com/purushartha",
     keywords:
       "The Purushartha Project, purushartha, private mentorship, trauma informed coaching, yoga mentorship, Ayurveda mentorship, Ashima Sood, Ascend",
@@ -64,12 +64,36 @@ const Purushartha = () => {
     <LandingPageLayout
       eyebrow="A Private Mentorship"
       title="The Purushartha Project"
-      lead="The four aims that, together, make a whole life. A one-on-one mentorship for people who have already done the workshops, read the books, and tried the usual coaching — and are ready to meet what is underneath."
+      lead="Private, one-to-one mentorship for people who are ready to understand what is shaping their lives, and choose what comes next more consciously."
       ctaHref="https://unlockascend.gumroad.com/l/discoverpurushartha"
       ctaLabel="Book a discovery call"
-      ctaNote="I respond personally. — Ashima"
+      ctaNote="I respond personally. Ashima"
       faqs={faqs}
     >
+      <p>You might be successful in your career and still feel disconnected from what you want.</p>
+      <p>
+        You might know your patterns, understand where they came from, and still find yourself
+        repeating them.
+      </p>
+      <p>
+        You might be facing a decision about your work, relationships, money, or the life you want to
+        build, and find it difficult to distinguish what you genuinely want from what you've learned
+        to expect of yourself.
+      </p>
+      <p>
+        <em className="font-display">The Purushartha Project</em> is an individualised mentorship for
+        exploring these questions at their roots.
+      </p>
+      <p>
+        Drawing on self-inquiry, mindset work, nervous-system practices, and traditional Indian
+        wisdom, we work together to understand the beliefs and responses shaping your experience,
+        reconnect with your values, and develop a more conscious way of moving forward.
+      </p>
+      <p>
+        This isn't about following someone else's formula for a better life. It's about understanding
+        your own life more clearly, so the choices you make are more genuinely your own.
+      </p>
+
       {/* Signature mark — four arcs for the four aims */}
       <div className="flex flex-col items-center py-2">
         <svg
@@ -84,122 +108,116 @@ const Purushartha = () => {
           <path d="M30 100 A70 70 0 0 1 100 30" fill="none" stroke="currentColor" strokeWidth="1.25" />
           <circle cx="100" cy="100" r="3" fill="currentColor" />
         </svg>
-        <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 font-body text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
-          <span>Purpose</span>
-          <span>·</span>
-          <span>Means</span>
-          <span>·</span>
-          <span>Desire</span>
-          <span>·</span>
-          <span>Freedom</span>
-        </div>
       </div>
 
       <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-8">
-        Beyond coaching
+        Why Purushartha?
       </h2>
-      <p className="font-display italic text-lg md:text-xl text-foreground/80 not-italic">
-        Most coaching manages the surface. This works at the root.
+      <p>
+        In the Indian philosophical tradition, the four <em className="font-display">puruṣārthas</em>{" "}
+        describe four aims of human life:
+      </p>
+      <ul className="space-y-2 list-none pl-0">
+        <li><strong className="font-medium text-foreground"><em>Dharma</em>:</strong> Purpose, responsibility, and right action.</li>
+        <li><strong className="font-medium text-foreground"><em>Artha</em>:</strong> Resources, material wellbeing, and the means to live.</li>
+        <li><strong className="font-medium text-foreground"><em>Kāma</em>:</strong> Desire, enjoyment, and fulfilment.</li>
+        <li><strong className="font-medium text-foreground"><em>Mokṣa</em>:</strong> Freedom or liberation.</li>
+      </ul>
+      <p>
+        Rather than treating work, relationships, material wellbeing, and inner freedom as separate
+        pursuits, this framework invites us to consider how they relate to one another, and what a
+        well-lived life means to us.
       </p>
       <p>
-        <em className="font-display">The Purushartha Project</em> is named for
-        <em className="font-display"> purushartha</em>, a term from the classical tradition I trained in,
-        which names the four aims a life is built from: purpose, means, desire, and freedom. Most coaching picks
-        one and works it in isolation — a career strategy here, a relationship script there. This
-        mentorship starts from a different premise: that the four are one system, and the pattern showing
-        up in your business is the same one showing up in your marriage and your body.
-      </p>
-      <p>
-        This is trauma-informed work. Before we build new habits or new goals, we look honestly at the
-        thoughts and identities you built to survive what you have already been through, so the shift is
-        not another layer of willpower stacked on an old wound — it is an actual change in what is
-        running underneath.
-      </p>
-      <p>
-        Over several months, in private one-on-one sessions, we pair deliberate mindset work with the
-        ancient healing tools I have trained in for over a decade, so the change reaches further than
-        insight and actually holds under pressure.
+        The mentorship takes this wider view into the specifics of your life, combining classical
+        insight with practical, individualised work.
       </p>
 
       <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-8">
-        Is this you
+        You may recognise yourself here
       </h2>
+      <dl className="space-y-6">
+        {[
+          ["You keep repeating a pattern you thought you'd already worked through.", "You understand it intellectually, but it still shows up in your choices or relationships."],
+          ["Your life looks successful, but something feels missing.", "You have built a career or life that once made sense, and you're questioning what you want from this next chapter."],
+          ["You struggle to trust your own decisions.", "You weigh every option, anticipate everyone else's reactions, and find it hard to know what feels right for you."],
+          ["You carry more than your share.", "In work, relationships, or family life, you often adapt to other people's needs and lose sight of your own."],
+          ["You are in a transition.", "You may be changing direction, returning to yourself after years of caregiving, or trying to work out what matters now."],
+        ].map(([t, d]) => (
+          <div key={t}>
+            <dt className="font-display text-xl font-normal text-foreground mb-1">{t}</dt>
+            <dd className="text-base">{d}</dd>
+          </div>
+        ))}
+      </dl>
       <p>
-        You already have a full life. Something in it still feels unfinished.
-      </p>
-      <p>
-        You might be an entrepreneur carrying a business that runs on your energy and nothing else, or a
-        coach or healer who has spent years holding space for others and quietly run out of anyone to hold
-        space for you. You might be steady in a corporate career and still restless, sensing there is a
-        version of your life you have not stepped into yet. You might be rebuilding after a sabbatical or
-        a long stretch spent caring for a home and everyone in it, wondering where you went. Or you might
-        simply be someone who, by every outward measure, has everything — and still feels something is
-        amiss. If any of that is familiar, this mentorship was built with you in mind.
+        You don't need to identify with every point. You only need to recognise that something in your
+        life deserves a closer look.
       </p>
 
       <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-8">
         The arc of the work
       </h2>
-      <p>
-        Without giving away the full map, here is the shape of the journey we walk together.
-      </p>
       <ol className="space-y-6 list-none pl-0 pt-2">
         <li>
-          <span className="font-display italic text-primary/80 text-sm block mb-1">i.</span>
-          <h3 className="font-display text-xl font-normal text-foreground mb-1">Rebuilding the mind</h3>
+          <span className="font-display italic text-primary/80 text-sm block mb-1">01.</span>
+          <h3 className="font-display text-xl font-normal text-foreground mb-1">Understand the patterns</h3>
           <p className="text-base">
-            We begin by deliberately reshaping the thoughts running your life on autopilot, so you can
-            tell the difference between an inherited belief and a choice you are actually making.
+            Identify the beliefs, assumptions, and automatic responses shaping how you think, feel, and
+            act. Begin distinguishing what you learned to do from what you consciously want to choose.
           </p>
         </li>
         <li>
-          <span className="font-display italic text-primary/80 text-sm block mb-1">ii.</span>
-          <h3 className="font-display text-xl font-normal text-foreground mb-1">Meeting what is underneath</h3>
+          <span className="font-display italic text-primary/80 text-sm block mb-1">02.</span>
+          <h3 className="font-display text-xl font-normal text-foreground mb-1">Create room for a different response</h3>
           <p className="text-base">
-            We trace the identity built by old pain against the one you would consciously choose, and
-            start closing the gap between them — working directly with the nervous system so the shift
-            settles in the body.
+            Work with the emotional and bodily responses that can keep familiar patterns in place.
+            Depending on your needs, this may involve self-inquiry, EFT, somatic practices, meditation,
+            or other tools suited to the work.
           </p>
         </li>
         <li>
-          <span className="font-display italic text-primary/80 text-sm block mb-1">iii.</span>
-          <h3 className="font-display text-xl font-normal text-foreground mb-1">Living from the new ground</h3>
+          <span className="font-display italic text-primary/80 text-sm block mb-1">03.</span>
+          <h3 className="font-display text-xl font-normal text-foreground mb-1">Put clarity into practice</h3>
           <p className="text-base">
-            With the old patterns loosened, we turn to what you are building next — your relationships,
-            your work, your longer-term vision — and put in place a way of deciding and acting that holds
-            after our sessions end.
+            Bring what you've learned into your everyday life: decisions, relationships, work,
+            boundaries, and the priorities you want to live by. Develop practices that can continue
+            beyond our time together.
           </p>
         </li>
       </ol>
 
       <h2 className="font-display text-2xl md:text-3xl font-light text-brand pt-8">
-        How we work together
+        A private mentorship, shaped around you
       </h2>
-      <p>
-        This is an intensive, private container — not a course you move through alone.
-      </p>
       <dl className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 pt-2">
         <div>
           <dt className="font-body text-xs tracking-[0.18em] uppercase text-primary/80 mb-1">Format</dt>
-          <dd className="text-base text-foreground">One-on-one, live sessions, held with full attention</dd>
+          <dd className="text-base text-foreground">One-to-one sessions with Ashima, held live.</dd>
         </div>
         <div>
-          <dt className="font-body text-xs tracking-[0.18em] uppercase text-primary/80 mb-1">Length</dt>
-          <dd className="text-base text-foreground">A multi-month arc, built to let real change settle</dd>
+          <dt className="font-body text-xs tracking-[0.18em] uppercase text-primary/80 mb-1">Duration</dt>
+          <dd className="text-base text-foreground">An 8- or 10-week engagement, depending on your needs and the scope of the work.</dd>
         </div>
         <div>
-          <dt className="font-body text-xs tracking-[0.18em] uppercase text-primary/80 mb-1">Between sessions</dt>
-          <dd className="text-base text-foreground">Direct support so you are not holding the work alone</dd>
+          <dt className="font-body text-xs tracking-[0.18em] uppercase text-primary/80 mb-1">Between-session support</dt>
+          <dd className="text-base text-foreground">Direct support between sessions, within the agreed boundaries of the mentorship.</dd>
         </div>
         <div>
           <dt className="font-body text-xs tracking-[0.18em] uppercase text-primary/80 mb-1">Approach</dt>
-          <dd className="text-base text-foreground">Mindset work, nervous-system practice, and classical wisdom, woven together</dd>
+          <dd className="text-base text-foreground">A personalised combination of self-inquiry, mindset work, nervous-system practices, contemplative methods, and traditional Indian wisdom.</dd>
         </div>
       </dl>
       <p className="pt-2">
-        Because this is a small, high-touch mentorship and not a group program, I take on a limited
-        number of people at a time. The full structure, energy exchange, and fit are things we talk
-        through on a discovery call.
+        We begin by understanding what you want to work through, what you've already tried, and what
+        feels most important now. From there, we shape the work around your needs and capacity.
+      </p>
+      <p>
+        This is a high-touch, private engagement, with a limited number of places available at a time.
+      </p>
+      <p>
+        The first step is a conversation. We'll explore what you're navigating, whether this approach
+        is a good fit, and what working together could look like. There is no obligation to continue.
       </p>
     </LandingPageLayout>
   );
