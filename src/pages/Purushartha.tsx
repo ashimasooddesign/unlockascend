@@ -1,6 +1,24 @@
 import LandingPageLayout, { FaqItem } from "@/components/LandingPageLayout";
 import { useSeo } from "@/hooks/useSeo";
 
+const DISCOVERY_CALL_URL = "https://unlockascend.gumroad.com/l/discoverpurushartha";
+
+const CallCta = ({ note }: { note?: string }) => (
+  <div className="text-center py-2">
+    <a
+      href={DISCOVERY_CALL_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn-primary"
+    >
+      Book a discovery call →
+    </a>
+    {note && (
+      <p className="mt-3 font-body text-sm text-muted-foreground italic">{note}</p>
+    )}
+  </div>
+);
+
 const faqs: FaqItem[] = [
   {
     question: "How is this different from coaching?",
@@ -93,6 +111,8 @@ const Purushartha = () => {
         This isn't about following someone else's formula for a better life. It's about understanding
         your own life more clearly, so the choices you make are more genuinely your own.
       </p>
+
+      <CallCta note="A short, honest conversation to see whether this work fits where you are." />
 
       {/* Signature mark — four arcs for the four aims */}
       <div className="flex flex-col items-center py-2">
