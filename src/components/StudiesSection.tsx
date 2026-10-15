@@ -11,22 +11,33 @@ const StudiesSection = () => {
             </h2>
             <div className="space-y-6 font-body text-base md:text-lg text-muted-foreground leading-relaxed">
               <p>
-                <em>Ascend</em> hosts small, reflective study circles rooted in the classical yogic and 
-                Vedantic traditions. These sessions approach sacred texts slowly and thoughtfully, 
-                allowing participants to explore their philosophical depth and practical relevance 
-                to modern life.
+                <em>Ascend</em> offers guided study of classical Indian philosophical and spiritual
+                texts. Rather than rushing through a text to complete a syllabus, these learning
+                circles create space for careful reading, questions, discussion, and contemplation.
+              </p>
+              <p>Our studies have included:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li><em>Yoga Sutras of Patanjali</em></li>
+                <li><em>Bhagavad Gita</em></li>
+                <li><em>Devi Mahatmyam</em> (Durga Saptashati)</li>
+                <li><em>Garbhopanishad</em></li>
+                <li><em>Sankhya Karika</em> and Ayurveda basics</li>
+                <li><em>Vigyan Bhairav Tantra</em></li>
+                <li><em>Aparokshanubhuti</em></li>
+                <li><em>Drg-Drsya-Viveka</em></li>
+              </ul>
+              <p>
+                Each study creates space for careful reading, discussion, and contemplation, helping
+                participants engage with the teachings not only intellectually, but as living wisdom
+                that can inform everyday choices and inner clarity.
               </p>
               <p>
-                Over time, these gatherings have included guided studies of texts such as the 
-                <em>Bhagavad Gita</em>, <em>Yoga Sutra</em>, <em>Devi Mahatmyam</em>, <em>Garbhopanishad</em>, and <em>Sankhya Karika</em>. 
-                Each study creates space for careful reading, discussion, and contemplation — 
-                helping participants engage with the teachings not just intellectually, but as 
-                living wisdom that can inform everyday choices and inner clarity.
+                Availability varies by program. Explore current offerings or enquire about one-to-one
+                study and future learning circles.
               </p>
               <p>
-                One example of this depth is our ongoing yearly <em>Ritucharya</em> program — a 
-                sustained exploration of Ayurveda's seasonal wisdom, woven into practice and 
-                daily life across the turning of each season.
+                Our annual <em>Ritucharya</em> program is a sustained exploration of Ayurveda's
+                seasonal wisdom, woven into practice and daily life across the changing seasons.
               </p>
               <p>
                 <a
